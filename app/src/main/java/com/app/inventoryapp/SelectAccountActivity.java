@@ -10,15 +10,17 @@ import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SelectAccountActivity extends AppCompatActivity {
-    @BindView(R.id.btnStoreAttendant) Button btnStoreAttendant;
-    @BindView(R.id.btnStoreOwner) Button btnStoreOwner;
+public class SelectAccountActivity extends AppCompatActivity implements View.OnClickListener{
+    @BindView(R.id.btnStoreAttendant) Button mBtnStoreAttendant;
+    @BindView(R.id.btnStoreOwner) Button mBtnStoreOwner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_account);
         ButterKnife.bind(this);
+        mBtnStoreAttendant.setOnClickListener(this);
+        mBtnStoreOwner.setOnClickListener(this);
 
         btnStoreAttendant = (Button) findViewById(R.id.btnStoreAttendant);
         btnStoreAttendant.setOnClickListener(new View.OnClickListener() {
@@ -37,5 +39,19 @@ public class SelectAccountActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view == mBtnStoreAttendant){
+            Intent intent = new Intent(SelectAccountActivity.this, AttendantLoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        if (view == mBtnStoreOwner){
+            Intent intent = new Intent(SelectAccountActivity.this, OwnerLoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 }

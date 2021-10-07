@@ -33,7 +33,7 @@ public class SelectAccountActivity extends AppCompatActivity {
         btnStoreOwner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SelectAccountActivity.this,MainActivity.class);
+                Intent intent = new Intent(SelectAccountActivity.this,RegisterStoreOwnerActivity.class);
                 startActivity(intent);
             }
         });

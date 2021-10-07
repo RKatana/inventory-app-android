@@ -10,20 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InventoryApp">
         <activity
+            android:name=".RegisterStoreOwnerActivity"
+            android:exported="true" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".SelectAccountActivity" />
+    </activity>
+        <activity
             android:name=".SelectAccountActivity"
             android:exported="true" />
         <activity
             android:name=".SplashScreen"
             android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <action android:name="android.intent.action.VIEW"/>
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
+
         </activity>
     </application>
 

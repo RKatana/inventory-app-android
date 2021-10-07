@@ -12,6 +12,8 @@
         <activity
             android:name=".SelectAccountActivity"
             android:exported="true" />
+
+        <activity
             android:name=".SplashScreen"
             android:exported="true">
         <intent-filter>

@@ -37,65 +37,18 @@ public class RegisterStoreOwnerActivity extends AppCompatActivity implements Vie
     @Override
     public void onClick(View view) {
         if(view == mLoginTextView){
-            Intent intent = new Intent(RegisterStoreOwnerActivity.this, SelectAccountActivity.class);
+            Intent intent = new Intent(RegisterStoreOwnerActivity.this, OwnerLoginActivity.class);
             intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK | intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             finish();
-        } if (view == mCreateStoreOwner){
-            createNewStoreOwner();
+        }
+        if (view == mCreateStoreOwner){
+            Intent intent = new Intent(RegisterStoreOwnerActivity.this, MainActivity.class);
+            intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK | intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
         }
 
-    }
-
-    public void createNewStoreOwner() {
-        final String name = mNameEditText.getText().toString().trim();
-        final String email = mEmailEditText.getText().toString().trim();
-        String password = mPasswordEditText.getText().toString().trim();
-        String confirmPassword = mConfirmPasswordEditText.getText().toString().trim();
-
-        boolean validEmail = isValidEmail(email);
-        boolean validName = isValidName(name);
-        boolean validPassword = isValidPassword(password, confirmPassword);
-
-    }
-
-    @Override
-    public void onStart(){
-        super.onStart();
-    }
-
-    @Override
-    public void onStop(){
-        super.onStop();
-
-    }
-
-    private boolean isValidEmail(String email) {
-        boolean isGoodEmail = (email != null && Patterns.EMAIL_ADDRESS.matcher(email).matches());
-        if(!isGoodEmail){
-            mEmailEditText.setError("Please enter a valid email address");
-            return false;
-        }
-        return isGoodEmail;
-    }
-
-    private boolean isValidName(String name){
-        if(name.equals("")){
-            mNameEditText.setError("Please enter your name");
-            return false;
-        }
-        return true;
-    }
-
-    private boolean isValidPassword(String password, String confirmPassword){
-        if(password.length() < 6){
-            mPasswordEditText.setError("Please create a password containing at least 6 characters");
-            return false;
-        } else if (!password.equals(confirmPassword)){
-            mPasswordEditText.setError("Passwords do not match");
-            return false;
-        }
-        return true;
     }
 
 }

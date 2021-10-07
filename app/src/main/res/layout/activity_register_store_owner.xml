@@ -10,7 +10,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true">
 
 
@@ -122,9 +122,9 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/loginTextView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/loginTextView"
                     android:layout_marginTop="10dp"
                     android:gravity="center_horizontal"
                     android:text="Already have an account? Login!"
@@ -134,9 +134,9 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/policyTextView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/policyTextView"
                     android:layout_marginTop="10dp"
                     android:gravity="center_horizontal"
                     android:text="@string/by_signing_up_you_agree_to_our_terms_of_use_and_privacy_policy"

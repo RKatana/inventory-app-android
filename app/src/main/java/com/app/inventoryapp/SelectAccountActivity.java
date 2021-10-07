@@ -10,7 +10,7 @@ import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SelectAccountActivity extends AppCompatActivity implements View.OnClickListener{
+public class SelectAccountActivity extends AppCompatActivity {
     @BindView(R.id.btnStoreAttendant) Button mBtnStoreAttendant;
     @BindView(R.id.btnStoreOwner) Button mBtnStoreOwner;
 
@@ -19,39 +19,29 @@ public class SelectAccountActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_account);
         ButterKnife.bind(this);
-        mBtnStoreAttendant.setOnClickListener(this);
-        mBtnStoreOwner.setOnClickListener(this);
 
-        btnStoreAttendant = (Button) findViewById(R.id.btnStoreAttendant);
-        btnStoreAttendant.setOnClickListener(new View.OnClickListener() {
+        mBtnStoreAttendant = (Button) findViewById(R.id.btnStoreAttendant);
+        mBtnStoreAttendant.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SelectAccountActivity.this,MainActivity.class);
-                startActivity(intent);
+            public void onClick(View view) {
+                if (view == mBtnStoreAttendant){
+                    Intent intent = new Intent(SelectAccountActivity.this, AttendantLoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
 
-        btnStoreOwner = (Button) findViewById(R.id.btnStoreOwner);
-        btnStoreOwner.setOnClickListener(new View.OnClickListener() {
+        mBtnStoreOwner = (Button) findViewById(R.id.btnStoreOwner);
+        mBtnStoreOwner.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SelectAccountActivity.this,RegisterStoreOwnerActivity.class);
-                startActivity(intent);
+            public void onClick(View view) {
+                if (view == mBtnStoreOwner){
+                    Intent intent = new Intent(SelectAccountActivity.this, OwnerLoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
-    }
-
-    @Override
-    public void onClick(View view) {
-        if (view == mBtnStoreAttendant){
-            Intent intent = new Intent(SelectAccountActivity.this, AttendantLoginActivity.class);
-            startActivity(intent);
-            finish();
-        }
-        if (view == mBtnStoreOwner){
-            Intent intent = new Intent(SelectAccountActivity.this, OwnerLoginActivity.class);
-            startActivity(intent);
-            finish();
-        }
     }
 }

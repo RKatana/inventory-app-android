@@ -10,6 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InventoryApp">
         <activity
+            android:name=".RegisterStoreOwnerActivity"
+            android:exported="true" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".SelectAccountActivity" />
+    </activity>
+      <activity
             android:name=".OwnerLoginActivity"
             android:exported="true">
             <meta-data

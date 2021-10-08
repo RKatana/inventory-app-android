@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Inventory App</string>
+    <string name="by_signing_up_you_agree_to_our_terms_of_use_and_privacy_policy">By signing up, you agree to our Terms of Use and Privacy Policy</string>
 </resources>

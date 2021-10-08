@@ -5,7 +5,10 @@
       <map>
         <entry key="app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.184375" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2734375" />
+        <entry key="app/src/main/res/layout/activity_attendant_login.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16822916666666668" />
+        <entry key="app/src/main/res/layout/activity_owner_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_register_store_owner.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_select_account.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.2421875" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.184375" />

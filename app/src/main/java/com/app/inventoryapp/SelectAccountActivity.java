@@ -11,8 +11,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class SelectAccountActivity extends AppCompatActivity {
-    @BindView(R.id.btnStoreAttendant) Button btnStoreAttendant;
-    @BindView(R.id.btnStoreOwner) Button btnStoreOwner;
+    @BindView(R.id.btnStoreAttendant) Button mBtnStoreAttendant;
+    @BindView(R.id.btnStoreOwner) Button mBtnStoreOwner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,21 +20,25 @@ public class SelectAccountActivity extends AppCompatActivity {
         setContentView(R.layout.activity_select_account);
         ButterKnife.bind(this);
 
-        btnStoreAttendant = (Button) findViewById(R.id.btnStoreAttendant);
-        btnStoreAttendant.setOnClickListener(new View.OnClickListener() {
+        mBtnStoreAttendant = (Button) findViewById(R.id.btnStoreAttendant);
+        mBtnStoreAttendant.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SelectAccountActivity.this,MainActivity.class);
-                startActivity(intent);
+            public void onClick(View view) {
+                if (view == mBtnStoreAttendant){
+                    Intent intent = new Intent(SelectAccountActivity.this, AttendantLoginActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
-        btnStoreOwner = (Button) findViewById(R.id.btnStoreOwner);
-        btnStoreOwner.setOnClickListener(new View.OnClickListener() {
+        mBtnStoreOwner = (Button) findViewById(R.id.btnStoreOwner);
+        mBtnStoreOwner.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SelectAccountActivity.this,MainActivity.class);
-                startActivity(intent);
+            public void onClick(View view) {
+                if (view == mBtnStoreOwner){
+                    Intent intent = new Intent(SelectAccountActivity.this, OwnerLoginActivity.class);
+                    startActivity(intent);
+                }
             }
         });
     }

@@ -10,22 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InventoryApp">
         <activity
-            android:name=".OwnerLoginActivity">
+            android:name=".RegisterStoreOwnerActivity"
+            android:exported="true" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".SelectAccountActivity" />
+    </activity>
+      <activity
+            android:name=".OwnerLoginActivity"
+            android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.app.inventoryapp.SelectAccountActivity" />
         </activity>
         <activity
-            android:name=".AttendantLoginActivity">
+            android:name=".AttendantLoginActivity"
+            android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.app.inventoryapp.SelectAccountActivity" />
         </activity>
         <activity
             android:name=".SelectAccountActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".SplashScreen"
             android:exported="true">

@@ -35,7 +35,6 @@ public class OwnerLoginActivity extends AppCompatActivity implements View.OnClic
         if(view == mRegisterTextView){
             Intent intent = new Intent(OwnerLoginActivity.this, RegisterStoreOwnerActivity.class);
             startActivity(intent);
-            finish();
         }
 
     }

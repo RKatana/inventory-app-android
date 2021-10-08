@@ -32,7 +32,8 @@
         </activity>
         <activity
             android:name=".SelectAccountActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".SplashScreen"
             android:exported="true">

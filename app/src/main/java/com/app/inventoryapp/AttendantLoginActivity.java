@@ -34,7 +34,6 @@ public class AttendantLoginActivity extends AppCompatActivity implements View.On
         if(view == mPasswordLoginButton){
             Intent intent = new Intent(AttendantLoginActivity.this, MainActivity.class);
             startActivity(intent);
-            finish();
         }
 
     }

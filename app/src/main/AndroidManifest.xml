@@ -8,13 +8,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.InventoryApp">
+        android:theme="@style/AppTheme.NoActionBar">
         <activity
             android:name=".RegisterStoreOwnerActivity"
             android:exported="true" >
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value=".SelectAccountActivity" />
+            android:value=".OwnerLoginActivity" />
     </activity>
       <activity
             android:name=".OwnerLoginActivity"
@@ -46,7 +46,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
         </activity>
     </application>
 

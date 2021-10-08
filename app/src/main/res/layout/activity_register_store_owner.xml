@@ -110,6 +110,18 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <TextView
+                    android:id="@+id/policyTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/by_signing_up_you_agree_to_our_terms_of_use_and_privacy_policy"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
                 <Button
                     android:id="@+id/createStoreOwner"
                     android:layout_width="150dp"
@@ -127,21 +139,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:gravity="center_horizontal"
-                    android:text="Already have an account? Login!"
+                    android:text="Already have an account? Sign in Now!"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="17sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/policyTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_horizontal"
-                    android:text="@string/by_signing_up_you_agree_to_our_terms_of_use_and_privacy_policy"
-                    android:textAlignment="center"
-                    android:textColor="@color/purple_700"
                     android:textSize="17sp"
                     android:textStyle="bold" />
 

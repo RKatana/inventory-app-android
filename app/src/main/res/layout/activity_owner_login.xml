@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#03A9F4"
+    android:background="@color/lightPrimaryColor"
     tools:context=".OwnerLoginActivity">
 
     <LinearLayout
@@ -28,7 +28,7 @@
             android:layout_below="@+id/firebaseProgressBar"
             android:layout_centerInParent="true"
             android:layout_margin="20dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:visibility="gone" />
 
         <EditText
@@ -63,12 +63,13 @@
 
         <Button
             android:id="@+id/passwordLoginButton"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:padding="10dp"
             android:text="Login"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             tools:ignore="TextContrastCheck" />
 
         <TextView
@@ -78,7 +79,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:text="Don't have an account? Sign up Now!"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -90,7 +91,7 @@
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
         android:text="Merchant Login"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="30dp"
         android:textStyle="bold" />
 

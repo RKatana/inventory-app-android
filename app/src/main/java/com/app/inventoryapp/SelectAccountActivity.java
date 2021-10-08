@@ -27,7 +27,6 @@ public class SelectAccountActivity extends AppCompatActivity {
                 if (view == mBtnStoreAttendant){
                     Intent intent = new Intent(SelectAccountActivity.this, AttendantLoginActivity.class);
                     startActivity(intent);
-                    finish();
                 }
             }
         });
@@ -39,7 +38,6 @@ public class SelectAccountActivity extends AppCompatActivity {
                 if (view == mBtnStoreOwner){
                     Intent intent = new Intent(SelectAccountActivity.this, OwnerLoginActivity.class);
                     startActivity(intent);
-                    finish();
                 }
             }
         });

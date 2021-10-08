@@ -40,13 +40,11 @@ public class RegisterStoreOwnerActivity extends AppCompatActivity implements Vie
             Intent intent = new Intent(RegisterStoreOwnerActivity.this, OwnerLoginActivity.class);
             intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK | intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
-            finish();
         }
         if (view == mCreateStoreOwner){
             Intent intent = new Intent(RegisterStoreOwnerActivity.this, MainActivity.class);
             intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK | intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
-            finish();
         }
 
     }

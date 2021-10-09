@@ -1,6 +1,7 @@
 package com.app.inventoryapp.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,56 +15,46 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.inventoryapp.R;
 import com.app.inventoryapp.models.Store;
+import com.app.inventoryapp.ui.AttendantLoginActivity;
+import com.app.inventoryapp.ui.SelectAccountActivity;
+import com.app.inventoryapp.ui.StoresDashboardActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-//public class StoreListAdapter extends ArrayAdapter {
-//    private Context mContext;
-//    private Store[] mStores;
-//
-//    public StoreListAdapter(@NonNull Context context, int resource, Store[] mStores) {
-//        super(context, resource);
-//        this.mContext = mContext;
-//        this.mStores = mStores;
-//    }
-//    @Override
-//    public Object getItem(int position){
-//        Store stores = mStores[position];
-//        return stores;
-//    }
-//
-//    @Override
-//    public  int getCount(){
-//        return mStores.length;
-//    }
-//}
-
 public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.ViewHolder>  {
     private static final String TAG = "StoreListAdapter";
-    private Store[] stores;
+    private ArrayList<Store> stores = new ArrayList<>();
     private Context context;
 
-    public StoreListAdapter(Context context, Store[] stores) {
+    public StoreListAdapter(Context context) {
         this.context = context;
-        this.stores = stores;
     }
-
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.stores_list_item, null);
+        ViewHolder holder = new ViewHolder(view);
+        return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull  ViewHolder holder , int position) {
+        Log.d(TAG, "onBindViewHolder: called");
+        holder.storeName.setText(stores.get(position).getName());
+        holder.storeLocation.setText(stores.get(position).getLocation());
+        holder.storeName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return stores.length;
+        return stores.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -76,5 +67,10 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.View
             storeName = (TextView) itemView.findViewById(R.id.storeName);
             storeLocation = (TextView) itemView.findViewById(R.id.storeLocation);
         }
+    }
+
+    public void setStores(ArrayList<Store> stores) {
+        this.stores = stores;
+        notifyDataSetChanged();
     }
 }

@@ -33,12 +33,12 @@
             android:visibility="gone" />
 
         <EditText
-            android:id="@+id/shopNameEditText"
+            android:id="@+id/usernameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="@android:color/white"
-            android:hint="Shop Name"
+            android:hint="Username"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             android:nextFocusDown="@+id/passwordEditText"
@@ -48,12 +48,12 @@
             tools:ignore="TextContrastCheck" />
 
         <EditText
-            android:id="@+id/locationEditText"
+            android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/white"
-            android:hint="Location"
-            android:inputType="text"
+            android:hint="password"
+            android:inputType="textPassword"
             android:minHeight="48dp"
             android:nextFocusDown="@+id/passwordEditText"
             android:padding="10dp"
@@ -63,7 +63,7 @@
 
 
         <Button
-            android:id="@+id/addStoreButton"
+            android:id="@+id/AddAdminButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:text="Add Store"
+        android:text="Add Store admin"
         android:textColor="@color/white"
         android:textSize="30dp"
         android:textStyle="bold" />

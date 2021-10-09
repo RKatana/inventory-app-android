@@ -11,24 +11,24 @@ import android.widget.EditText;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class AddStoreActivity extends AppCompatActivity implements View.OnClickListener{
-    @BindView(R.id.addStoreButton) Button mAddStoreButton;
-    @BindView(R.id.shopNameEditText) EditText mShopNameEditText;
-    @BindView(R.id.locationEditText) EditText mLocationEditText;
+public class AddStoreAdminActivity extends AppCompatActivity implements View.OnClickListener{
+    @BindView(R.id.AddAdminButton) Button mAddAdminButton;
+    @BindView(R.id.usernameEditText) EditText mUsernameEditText;
+    @BindView(R.id.passwordEditText) EditText mPasswordEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_store);
+        setContentView(R.layout.activity_add_store_admin);
         ButterKnife.bind(this);
 
-        mAddStoreButton.setOnClickListener(this);
+        mAddAdminButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        if(view == mAddStoreButton){
-            Intent intent = new Intent(AddStoreActivity.this, AddStoreAdminActivity.class);
+        if(view == mAddAdminButton){
+            Intent intent = new Intent(AddStoreAdminActivity.this, MainActivity.class);
             intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK | intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         }

@@ -11,14 +11,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class SelectAccountActivity extends AppCompatActivity {
-    @BindView(R.id.btnStoreAttendant) Button mBtnStoreAttendant;
-    @BindView(R.id.btnStoreOwner) Button mBtnStoreOwner;
+    public static final String TAG = SelectAccountActivity.class.getSimpleName();
+    private Button mBtnStoreAttendant;
+    private Button mBtnStoreOwner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_account);
-        ButterKnife.bind(this);
 
         mBtnStoreAttendant = (Button) findViewById(R.id.btnStoreAttendant);
         mBtnStoreAttendant.setOnClickListener(new View.OnClickListener() {
@@ -41,5 +41,9 @@ public class SelectAccountActivity extends AppCompatActivity {
                 }
             }
         });
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
     }
 }

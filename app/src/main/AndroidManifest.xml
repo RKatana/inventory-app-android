@@ -10,8 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
+            android:name=".StoresDashboardActivity"
+            android:exported="true" />
+      
+        <activity
             android:name=".AddStoreAdminActivity"
             android:exported="true" />
+      
         <activity
             android:name=".AddStoreActivity"
             android:exported="true" />
@@ -38,7 +43,8 @@
         </activity>
         <activity
             android:name=".SelectAccountActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SplashScreen"
             android:exported="true">
@@ -51,7 +57,9 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true">
+      </activity>
+     
     </application>
 
 </manifest>

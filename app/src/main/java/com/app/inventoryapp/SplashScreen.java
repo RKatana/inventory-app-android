@@ -23,5 +23,10 @@ public class SplashScreen extends AppCompatActivity {
                 SplashScreen.this.finish();
             }
         }, SPLASH_DISPLAY_LENGTH);
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
     }
 }

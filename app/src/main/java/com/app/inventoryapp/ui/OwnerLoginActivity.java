@@ -1,4 +1,4 @@
-package com.app.inventoryapp;
+package com.app.inventoryapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.app.inventoryapp.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -56,5 +56,8 @@ dependencies {
     // animated gif
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.3'
 
+    //  RecyclerView
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
 
 }

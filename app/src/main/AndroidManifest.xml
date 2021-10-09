@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
+            android:name=".AddStoreAdminActivity"
+            android:exported="true" />
+        <activity
             android:name=".AddStoreActivity"
             android:exported="true" />
         <activity
@@ -48,7 +51,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

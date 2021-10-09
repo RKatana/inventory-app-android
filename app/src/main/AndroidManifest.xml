@@ -12,6 +12,14 @@
         <activity
             android:name=".StoresDashboardActivity"
             android:exported="true" />
+      
+        <activity
+            android:name=".AddStoreAdminActivity"
+            android:exported="true" />
+      
+        <activity
+            android:name=".AddStoreActivity"
+            android:exported="true" />
         <activity
             android:name=".RegisterStoreOwnerActivity"
             android:exported="true">
@@ -49,7 +57,9 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+      </activity>
+     
     </application>
 
 </manifest>

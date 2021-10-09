@@ -1,4 +1,4 @@
-package com.app.inventoryapp;
+package com.app.inventoryapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,8 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
+import com.app.inventoryapp.R;
 
 public class SelectAccountActivity extends AppCompatActivity {
     public static final String TAG = SelectAccountActivity.class.getSimpleName();

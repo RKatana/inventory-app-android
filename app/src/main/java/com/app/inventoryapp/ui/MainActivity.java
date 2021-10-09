@@ -1,8 +1,10 @@
-package com.app.inventoryapp;
+package com.app.inventoryapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.app.inventoryapp.R;
 
 public class MainActivity extends AppCompatActivity {
 

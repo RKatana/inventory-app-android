@@ -25,6 +25,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/storeName"
                 android:text="STORE ONE"
                 android:textColor="@color/black"
                 android:textSize="25sp"
@@ -33,6 +34,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/storeLocation"
                 android:text="Location"
                 android:textColor="@color/black"
                 android:textSize="20sp"

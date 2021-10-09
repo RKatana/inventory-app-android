@@ -23,6 +23,7 @@ public class AddStoreActivity extends AppCompatActivity implements View.OnClickL
         ButterKnife.bind(this);
 
         mAddStoreButton.setOnClickListener(this);
+
     }
 
     @Override

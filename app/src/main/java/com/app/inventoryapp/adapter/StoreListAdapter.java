@@ -2,26 +2,19 @@ package com.app.inventoryapp.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.inventoryapp.R;
 import com.app.inventoryapp.models.Store;
-import com.app.inventoryapp.ui.AttendantLoginActivity;
 import com.app.inventoryapp.ui.MainActivity;
 import com.app.inventoryapp.ui.ProductsActivity;
-import com.app.inventoryapp.ui.SelectAccountActivity;
-import com.app.inventoryapp.ui.StoresDashboardActivity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -74,7 +67,7 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.Stor
         @Override
         public void onClick(View view) {
             int itemPosition = getLayoutPosition();
-            Intent intent = new Intent(mContext, ProductsActivity.class);
+            Intent intent = new Intent(mContext, MainActivity.class);
             intent.putExtra("position", itemPosition);
             mContext.startActivity(intent);
         }

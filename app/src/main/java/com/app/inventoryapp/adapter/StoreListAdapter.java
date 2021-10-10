@@ -52,7 +52,9 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.View
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public StoreListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.stores_list_item,parent,false);
+        ViewHolder viewHolder = new ViewHolder(view)
         return null;
     }
 

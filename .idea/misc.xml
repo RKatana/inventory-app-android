@@ -10,10 +10,13 @@
         <entry key="app/src/main/res/layout/activity_attendant_login.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/activity_owner_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_products.xml" value="0.23846153846153847" />
         <entry key="app/src/main/res/layout/activity_register_store_owner.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_select_account.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.2421875" />
         <entry key="app/src/main/res/layout/activity_stores_dashboard.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/products_list_item.xml" value="0.2072072072072072" />
+        <entry key="app/src/main/res/layout/productslistitem.xml" value="0.2490740740740741" />
         <entry key="app/src/main/res/layout/stores_list_item.xml" value="0.1" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.184375" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.184375" />

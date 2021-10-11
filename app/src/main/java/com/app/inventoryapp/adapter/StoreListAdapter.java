@@ -55,6 +55,9 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.Stor
         public StoreViewHolder(@NonNull View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+
+            mStoreName =(TextView) itemView.findViewById(R.id.storeName);
+            mStoreLocation =(TextView) itemView.findViewById(R.id.storeLocation);
             mContext = itemView.getContext();
             itemView.setOnClickListener(this);
         }

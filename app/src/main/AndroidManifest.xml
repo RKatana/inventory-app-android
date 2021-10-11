@@ -10,11 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".ui.MyClerksDashBoardActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.MyAdminsDashBoardActivity"
-            android:exported="true" />
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.ProductsActivity"
             android:exported="true" />
@@ -62,9 +61,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.MainActivity"
-            android:exported="true" />
     </application>
 
 </manifest>

@@ -10,4 +10,7 @@
     <color name="accentColor">#00BCD4</color>
     <color name="lightPrimaryColor"> #2A2E43</color>
     <color name="lightBlue">#0288D1</color>
+    <color name="lightDeepBlue">#607D8B</color>
+    <color name="lightDee">#69adc6</color>
+
 </resources>

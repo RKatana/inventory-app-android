@@ -154,8 +154,6 @@
                         android:layout_gravity="center"
                         android:textSize="17sp"/>
 
-
-
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>

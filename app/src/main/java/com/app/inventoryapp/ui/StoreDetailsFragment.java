@@ -28,18 +28,37 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.gson.Gson;
 
+import org.parceler.Parcels;
+
 public class StoreDetailsFragment extends Fragment {
 
     private static final String TAG = "StoreDetailsFragment ";
     private BottomNavigationView bottomNavigationView;
 
-    private TextView storeProducts;
+    private TextView storeName;
+    private TextView storeLocation;
+
+
+    private Store mStores;
+
+    public StoreDetailsFragment() {
+        // Required empty public constructor
+    }
+
+
+    public static StoreDetailsFragment newInstance(Store mStores) {
+        StoreDetailsFragment storeDetailsFragment= new StoreDetailsFragment();
+        Bundle args = new Bundle();
+        args.putParcelable("store", Parcels.wrap(mStores));
+        storeDetailsFragment.setArguments(args);
+        return storeDetailsFragment;
+    }
+
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
 //        storeProducts = (TextView) storeProducts.findViewById(R.id.storeProducts);
 //        storeProducts.setOnClickListener(new View.OnClickListener() {
@@ -60,8 +79,6 @@ public class StoreDetailsFragment extends Fragment {
         initViews(view);
         initBottomNavigation();
 
-        Utils utils = new Utils();
-        utils.initDatabase(getActivity());
 
         return view;
     }

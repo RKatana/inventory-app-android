@@ -6,17 +6,16 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.inventoryapp.R;
 import com.app.inventoryapp.models.Store;
 import com.app.inventoryapp.ui.MainActivity;
 import com.app.inventoryapp.ui.ProductsActivity;
+import com.app.inventoryapp.ui.StoreDetailsFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,15 +26,12 @@ import butterknife.ButterKnife;
 public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.StoreViewHolder>  {
 
     private static final String TAG = "StoreListAdapter";
-    private ArrayList<Store> stores;
-    private  Context context;
+    private List<Store> mStores;
+    private  Context mContext;
 
-    public StoreListAdapter(ArrayList<Store> stores, Context context) {
-        this.stores = stores;
-        this.context = context;
-    }
-
-    public StoreListAdapter() {
+    public StoreListAdapter(List<Store> mStores, Context mContext) {
+        this.mStores = mStores;
+        this.mContext = mContext;
     }
 
     @NonNull
@@ -49,45 +45,45 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.Stor
     @Override
     public void onBindViewHolder(@NonNull StoreListAdapter.StoreViewHolder holder, int position) {
         Log.d(TAG,"onBindViewHolder: called");
-        holder.storeName.setText(stores.get(position).getName());
-        holder.storeLocation.setText(stores.get(position).getLocation());
-        holder.parent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //navigate to main store fragment
-            }
-        });
-
+        holder.mStoreName.setText(mStores.get(position).getName());
+        holder.mStoreLocation.setText(mStores.get(position).getName());
 
     }
 
     @Override
     public int getItemCount() {
-        return stores.size();
+        return mStores.size();
     }
 
-    public  class StoreViewHolder extends  RecyclerView.ViewHolder {
-       private ImageView imageView;
-       private TextView storeName;
-       private TextView storeLocation;
-       private CardView parent;
+    public  class StoreViewHolder extends  RecyclerView.ViewHolder implements  View.OnClickListener{
+        @BindView(R.id.storeName) TextView mStoreName;
+        @BindView(R.id.storeLocation) TextView mStoreLocation;
 
         public StoreViewHolder(@NonNull View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
 
-            storeName =(TextView) itemView.findViewById(R.id.storeName);
-            storeLocation =(TextView) itemView.findViewById(R.id.storeLocation);
-            parent = (CardView) itemView.findViewById(R.id.parent) ;
-            context = itemView.getContext();
-
+            mStoreName =(TextView) itemView.findViewById(R.id.storeName);
+            mStoreLocation =(TextView) itemView.findViewById(R.id.storeLocation);
+            mContext = itemView.getContext();
             itemView.setOnClickListener(this);
         }
 
+        public void bindStore (Store store){
+            mStoreName.setText(store.getName());
+            mStoreLocation.setText(store.getLocation());
+        }
+
+        @Override
+        public void onClick(View view) {
+            int itemPosition = getLayoutPosition();
+            Intent intent = new Intent(mContext, MainActivity.class);
+            intent.putExtra("position", itemPosition);
+            mContext.startActivity(intent);
+        }
     }
 
-    public void setStores(ArrayList<Store> stores) {
-        this.stores = stores;
-        notifyDataSetChanged();
+    public void setmStores(List<Store> mStores) {
+        this.mStores = mStores;
     }
 }

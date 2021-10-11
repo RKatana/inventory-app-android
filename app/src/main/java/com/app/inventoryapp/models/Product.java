@@ -1,5 +1,7 @@
 package com.app.inventoryapp.models;
 
+import org.parceler.Parcel;
+
 public class Product {
     private int id;
     private String name;

@@ -25,14 +25,14 @@ public class StoresDashboardActivity extends AppCompatActivity {
     private static final String TAG = "StoresDashboardActivity";
     @BindView(R.id.storeRecyclerView) RecyclerView mRecyclerView;
 
-    Store store1 = new Store("Store One","Nairobi Karen");
-    Store store2 = new Store("Store Two","Kenya");
-    Store store3 = new Store("Store Three","Karen");
-    Store store4 = new Store("Store Four"," Ngong");
-    Store store5 = new Store("Store Five","Samburu");
-    Store store6 = new Store("Store Six","Kitengela");
-    Store store7 = new Store("Store Seven","Don home");
-    Store store8 = new Store("Store Eight","Ngara");
+    Store store1 = new Store("Naivas Supermarket","Nairobi Karen");
+    Store store2 = new Store("Bestmart supermarket","Kenya");
+    Store store3 = new Store("Muthokinjo hardware","Karen");
+    Store store4 = new Store("Grocery inn"," Ngong");
+    Store store5 = new Store("Pizza inn ","Samburu");
+    Store store6 = new Store("Chuma hardware","Kitengela");
+    Store store7 = new Store("Kempiski restaurant","Don home");
+    Store store8 = new Store("Electronics ltd","Ngara");
 
     private StoreListAdapter mAdapter;
     public List<Store> Stores = Arrays.asList(new Store[]{store1, store2, store3, store4, store5, store6, store7, store8});
@@ -46,7 +46,7 @@ public class StoresDashboardActivity extends AppCompatActivity {
 
         mAdapter = new StoreListAdapter(Stores,this);
         mRecyclerView.setAdapter(mAdapter);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(StoresDashboardActivity.this);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(StoresDashboardActivity.this, RecyclerView.HORIZONTAL,false);
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setVisibility(View.VISIBLE);

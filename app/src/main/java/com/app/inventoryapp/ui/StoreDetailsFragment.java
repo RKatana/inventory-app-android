@@ -40,27 +40,27 @@ public class StoreDetailsFragment extends Fragment {
 
     private void initBottomNavigation() {
         Log.d(TAG, "initBottomNavigation: selected");
-        bottomNavigationView.setSelectedItemId(R.id.home);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.search:
-
-                        break;
-                    case R.id.home:
-
-                        break;
-                    case R.id.Clerk:
-                        Toast.makeText(getActivity(), "Clerk selected", Toast.LENGTH_SHORT).show();
-
-                        break;
-                    default:
-                        break;
-
-                }
-                return true;
-            }
-        });
+//        bottomNavigationView.setSelectedItemId(R.id.home);
+//        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                switch (item.getItemId()) {
+//                    case R.id.search:
+//
+//                        break;
+//                    case R.id.home:
+//
+//                        break;
+//                    case R.id.Clerk:
+//                        Toast.makeText(getActivity(), "Clerk selected", Toast.LENGTH_SHORT).show();
+//
+//                        break;
+//                    default:
+//                        break;
+//
+//                }
+//                return true;
+//            }
+//        });
     }
 }

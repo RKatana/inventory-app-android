@@ -30,7 +30,7 @@ public class AttendantsListAdapter extends RecyclerView.Adapter<AttendantsListAd
     @NonNull
     @Override
     public AttendantsListAdapter.AttendantsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.products_list_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.attendants_list_item,parent,false);
         AttendantsViewHolder viewHolder = new AttendantsViewHolder(view);
         return viewHolder;
     }

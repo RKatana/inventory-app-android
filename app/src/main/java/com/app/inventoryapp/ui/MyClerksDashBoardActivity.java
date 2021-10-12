@@ -20,8 +20,7 @@ import butterknife.ButterKnife;
 public class MyClerksDashBoardActivity extends AppCompatActivity {
 
 
-    @BindView(R.id.recyclerView)
-    RecyclerView mRecyclerView;
+    @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
 
     private AttendantsListAdapter mAdapter;
 

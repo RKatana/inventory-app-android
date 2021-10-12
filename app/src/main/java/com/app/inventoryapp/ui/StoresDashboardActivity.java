@@ -46,11 +46,10 @@ public class StoresDashboardActivity extends AppCompatActivity {
 
         mAdapter = new StoreListAdapter(Stores,this);
         mRecyclerView.setAdapter(mAdapter);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(StoresDashboardActivity.this, RecyclerView.HORIZONTAL,false);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(StoresDashboardActivity.this);
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setVisibility(View.VISIBLE);
-
 
     }
 }

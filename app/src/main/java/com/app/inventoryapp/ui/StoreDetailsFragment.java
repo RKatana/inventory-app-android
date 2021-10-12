@@ -41,32 +41,12 @@ public class StoreDetailsFragment extends Fragment {
 
     private Store mStores;
 
-    public StoreDetailsFragment() {
-        // Required empty public constructor
-    }
-
-
-    public static StoreDetailsFragment newInstance(Store mStores) {
-        StoreDetailsFragment storeDetailsFragment= new StoreDetailsFragment();
-        Bundle args = new Bundle();
-        args.putParcelable("store", Parcels.wrap(mStores));
-        storeDetailsFragment.setArguments(args);
-        return storeDetailsFragment;
-    }
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        storeProducts = (TextView) storeProducts.findViewById(R.id.storeProducts);
-//        storeProducts.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
+
     }
 
 
@@ -75,6 +55,7 @@ public class StoreDetailsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_store_details, container, false);
+        getActivity().setTitle("Home");
 
         initViews(view);
         initBottomNavigation();
@@ -91,7 +72,9 @@ public class StoreDetailsFragment extends Fragment {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.search:
-                        Toast.makeText(getActivity(), "Search selected", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getActivity(), StoresDashboardActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
 
                         break;
                     case R.id.home:
@@ -99,7 +82,9 @@ public class StoreDetailsFragment extends Fragment {
 
                         break;
                     case R.id.Clerk:
-                        Toast.makeText(getActivity(), "Clerk selected", Toast.LENGTH_SHORT).show();
+                        Intent clerkIntent = new Intent(getActivity(), ProductsActivity.class);
+                        clerkIntent .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(clerkIntent );
 
                         break;
                     default:

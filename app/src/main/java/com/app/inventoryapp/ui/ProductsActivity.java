@@ -54,5 +54,9 @@ public class ProductsActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setVisibility(View.VISIBLE);
 
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().show();
+        }
+
     }
 }

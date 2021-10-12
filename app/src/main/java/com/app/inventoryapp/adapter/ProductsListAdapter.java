@@ -48,8 +48,8 @@ public class ProductsListAdapter extends RecyclerView.Adapter<ProductsListAdapte
 
     public class ProductsViewHolder extends RecyclerView.ViewHolder{
 
-        @BindView(R.id.ProductName) TextView mProductTextView;
-        @BindView(R.id.paymentStatus) TextView mPaymentStatusTextView;
+//        @BindView(R.id.ProductName) TextView mProductTextView;
+//        @BindView(R.id.paymentStatus) TextView mPaymentStatusTextView;
 
         public ProductsViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -57,7 +57,7 @@ public class ProductsListAdapter extends RecyclerView.Adapter<ProductsListAdapte
             mContext = itemView.getContext();
         }
         public void bindProduct (Product product){
-            mProductTextView.setText(product.getName());
+//            mProductTextView.setText(product.getName());
            // mPaymentStatusTextView.setText(product.getQuantity());
         }
     }

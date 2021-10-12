@@ -9,7 +9,7 @@ public class Attendant {
     private String accessLevel;
     private int store_id;
 
-    public Attendant(String email, String password) {
+    public Attendant(String email, String password,String accessLevel) {
         this.id = id;
         this.email = email;
         this.password = password;

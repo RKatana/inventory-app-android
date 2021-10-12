@@ -52,6 +52,14 @@
             android:exported="true"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".ui.MyAdminsDashBoardActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.MyClerksDashBoardActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".ui.SplashScreen"
             android:exported="true">
             <intent-filter>

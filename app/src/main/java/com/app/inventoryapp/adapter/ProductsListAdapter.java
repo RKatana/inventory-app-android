@@ -20,7 +20,7 @@ import butterknife.ButterKnife;
 
 public class ProductsListAdapter extends RecyclerView.Adapter<ProductsListAdapter.ProductsViewHolder>{
 
-    public List<Product> mProducts = new ArrayList<>();
+    public List<Product> mProducts;
     private Context mContext;
 
     public ProductsListAdapter(List<Product> mProducts, Context mContext) {

@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -28,12 +29,16 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.gson.Gson;
 
-public class StoreDetailsFragment extends Fragment {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+public class StoreDetailsFragment extends Fragment implements View.OnClickListener{
 
     private static final String TAG = "StoreDetailsFragment ";
     private BottomNavigationView bottomNavigationView;
 
     private TextView storeProducts;
+    //@BindView(R.id.storeAdmin) CardView mStoreProducts;
 
 
     @Override
@@ -41,13 +46,6 @@ public class StoreDetailsFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
 
-//        storeProducts = (TextView) storeProducts.findViewById(R.id.storeProducts);
-//        storeProducts.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
     }
 
 
@@ -60,6 +58,8 @@ public class StoreDetailsFragment extends Fragment {
         initViews(view);
         initBottomNavigation();
 
+       // ButterKnife.bind(this, view);
+       // mStoreProducts.setOnClickListener(this);
         Utils utils = new Utils();
         utils.initDatabase(getActivity());
 
@@ -83,6 +83,9 @@ public class StoreDetailsFragment extends Fragment {
                         break;
                     case R.id.Clerk:
                         Toast.makeText(getActivity(), "Clerk selected", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getActivity(), MyClerksDashBoardActivity.class);
+                        startActivity(intent);
+
 
                         break;
                     default:
@@ -97,5 +100,13 @@ public class StoreDetailsFragment extends Fragment {
     private void initViews(View view) {
         Log.d(TAG,"initViews: started");
         bottomNavigationView = (BottomNavigationView) view.findViewById(R.id.bottomNavigationView);
+    }
+
+    @Override
+    public void onClick(View view) {
+//        if (view == mStoreProducts){
+//            Intent intent = new Intent(getActivity(), MyAdminsDashBoardActivity.class);
+//            startActivity(intent);
+//        }
     }
 }

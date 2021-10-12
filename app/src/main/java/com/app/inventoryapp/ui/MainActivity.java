@@ -83,6 +83,8 @@ public class MainActivity extends AppCompatActivity
         switch (item.getItemId()) {
             case R.id.Clerk:
                 Toast.makeText(this,"Clerks",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, MyClerksDashBoardActivity.class);
+                startActivity(intent);
 
                 break;
             case R.id.logout:

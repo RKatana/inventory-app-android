@@ -20,14 +20,17 @@
         <entry key="app/src/main/res/layout/activity_add_store_admin.xml" value="0.15885416666666666" />
         <entry key="app/src/main/res/layout/activity_attendant_login.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_my_admins_dash_board.xml" value="0.25729166666666664" />
+        <entry key="app/src/main/res/layout/activity_my_clerks_dash_board.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_owner_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_products.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/activity_register_store_owner.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_select_account.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.2421875" />
         <entry key="app/src/main/res/layout/activity_store_details.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_stores_dashboard.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_stores_dashboard.xml" value="0.189873417721519" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/clerks_list_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.16822916666666668" />

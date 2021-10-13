@@ -10,37 +10,57 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".AddStoreAdminActivity"
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.ProductsActivity"
             android:exported="true" />
         <activity
-            android:name=".AddStoreActivity"
+            android:name=".ui.StoresDashboardActivity"
             android:exported="true" />
         <activity
-            android:name=".RegisterStoreOwnerActivity"
+            android:name=".ui.AddStoreAdminActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.AddStoreActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.RegisterStoreOwnerActivity"
             android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".OwnerLoginActivity" />
+                android:value=".ui.OwnerLoginActivity" />
         </activity>
         <activity
-            android:name=".OwnerLoginActivity"
+            android:name=".ui.OwnerLoginActivity"
             android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.inventoryapp.SelectAccountActivity" />
+                android:value="com.app.inventoryapp.ui.SelectAccountActivity" />
         </activity>
         <activity
-            android:name=".AttendantLoginActivity"
+            android:name=".ui.AttendantLoginActivity"
             android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.inventoryapp.SelectAccountActivity" />
+                android:value="com.app.inventoryapp.ui.SelectAccountActivity" />
         </activity>
         <activity
-            android:name=".SelectAccountActivity"
-            android:exported="true" />
+            android:name=".ui.SelectAccountActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".ui.MyAdminsDashBoardActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.MyClerksDashBoardActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,9 +69,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
     </application>
 
 </manifest>

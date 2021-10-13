@@ -1,4 +1,4 @@
-package com.app.inventoryapp;
+package com.app.inventoryapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,18 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
+import com.app.inventoryapp.R;
 
 public class SelectAccountActivity extends AppCompatActivity {
-    @BindView(R.id.btnStoreAttendant) Button mBtnStoreAttendant;
-    @BindView(R.id.btnStoreOwner) Button mBtnStoreOwner;
+    public static final String TAG = SelectAccountActivity.class.getSimpleName();
+    private Button mBtnStoreAttendant;
+    private Button mBtnStoreOwner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_account);
-        ButterKnife.bind(this);
 
         mBtnStoreAttendant = (Button) findViewById(R.id.btnStoreAttendant);
         mBtnStoreAttendant.setOnClickListener(new View.OnClickListener() {
@@ -41,5 +40,9 @@ public class SelectAccountActivity extends AppCompatActivity {
                 }
             }
         });
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
     }
 }

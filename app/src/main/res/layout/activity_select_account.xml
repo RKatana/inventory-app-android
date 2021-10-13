@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightPrimaryColor"
-    tools:context=".SelectAccountActivity">
+    tools:context=".ui.SelectAccountActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -17,7 +17,7 @@
 
 
     <TextView
-        android:id="@+id/textSelectAccount"
+        android:id="@+id/textSelectAccountTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
@@ -31,7 +31,7 @@
         android:id="@+id/btnStoreAttendant"
         android:layout_width="280dp"
         android:layout_height="90dp"
-        android:layout_below="@id/textSelectAccount"
+        android:layout_below="@id/textSelectAccountTextView"
         android:layout_centerHorizontal="true"
         android:drawableLeft="@drawable/ic_action_name"
         android:text="STORE ATTENDANT" />

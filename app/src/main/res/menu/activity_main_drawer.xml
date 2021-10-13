@@ -14,6 +14,12 @@
             android:title="Add Store"
             android:icon="@drawable/ic_baseline_add_business_24"/>
 
+
+        <item
+            android:id="@+id/ProductList"
+            android:title="Products"
+            android:icon="@drawable/ic_baseline_library_add_24"/>
+
         <item
             android:id="@+id/Clerk"
             android:title="Clerks"

@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="260dp"
-    android:layout_height="160dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="7dp"
-    app:cardElevation="2dp"
-    android:id="@+id/parent"
-    android:layout_gravity="center"
-    android:layout_margin="5dp">
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_margin="10dp"
+    android:id="@+id/Parent"
+    android:elevation="10dp"
+    app:cardElevation="10dp">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="20dp"
-            android:src="@drawable/image3" />
 
         <TextView
             android:id="@+id/storeLocation"
@@ -33,14 +25,14 @@
             android:textStyle="italic" />
 
         <TextView
+            android:id="@+id/storeName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/storeName"
-            android:text="Naivas superMarket"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:text="Naivas superMarket"
             android:textSize="16dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
     </RelativeLayout>
 

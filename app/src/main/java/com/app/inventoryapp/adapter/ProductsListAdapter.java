@@ -1,12 +1,16 @@
 package com.app.inventoryapp.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.inventoryapp.R;
@@ -47,9 +51,11 @@ public class ProductsListAdapter extends RecyclerView.Adapter<ProductsListAdapte
     }
 
     public class ProductsViewHolder extends RecyclerView.ViewHolder{
+        CardView cv;
+        LinearLayout gone;
 
-//        @BindView(R.id.ProductName) TextView mProductTextView;
-//        @BindView(R.id.paymentStatus) TextView mPaymentStatusTextView;
+        @BindView(R.id.ProductName) TextView mProductTextView;
+        @BindView(R.id.paymentStatus) TextView mPaymentStatusTextView;
 
         public ProductsViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -57,7 +63,7 @@ public class ProductsListAdapter extends RecyclerView.Adapter<ProductsListAdapte
             mContext = itemView.getContext();
         }
         public void bindProduct (Product product){
-//            mProductTextView.setText(product.getName());
+            mProductTextView.setText(product.getName());
            // mPaymentStatusTextView.setText(product.getQuantity());
         }
     }

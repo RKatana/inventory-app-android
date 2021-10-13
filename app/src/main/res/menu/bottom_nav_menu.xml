@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/search"
-        android:icon="@drawable/ic_baseline_search_24"
-        android:title="search"/>
+        android:id="@+id/products"
+        android:icon="@drawable/ic_baseline_library_add_24"
+        android:title="Product"/>
 
     <item
         android:title="Home"

@@ -8,31 +8,29 @@
 
 
     <LinearLayout
-        android:orientation="vertical"
-        android:background="@drawable/bg"
-        android:weightSum="10"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:orientation="vertical"
+        android:weightSum="10">
 
         <TextView
             android:id="@+id/storeName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
             android:layout_marginStart="5dp"
             android:layout_marginTop="28dp"
             android:layout_marginBottom="60dp"
             android:text="STORE ONE"
-            android:textStyle="bold"
             android:textColor="#F57C00"
-            android:textSize="40sp" />
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <GridLayout
             android:id="@+id/mainGridLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginTop="13dp"
             android:layout_weight="8"
             android:alignmentMode="alignMargins"
@@ -42,7 +40,6 @@
             android:rowCount="2">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/storeAdmin"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -56,21 +53,22 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_margin="16dp"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="85dp"
                         android:layout_height="85dp"
+                        android:id="@+id/storeAdmin"
+                        android:onClick="storeButton"
                         android:padding="10dp"
-                        android:src="@drawable/admin"/>
+                        android:src="@drawable/admin" />
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="14dp"
+                        android:layout_height="wrap_content"
                         android:text="My Admins"
-                        android:textSize="17dp"
+                        android:textSize="14dp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -78,7 +76,6 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/storeReports"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -92,25 +89,25 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_margin="16dp"
                     android:orientation="vertical">
 
                     <ImageView
-
                         android:layout_width="85dp"
                         android:layout_height="85dp"
-                        android:padding="10dp"
+                        android:id="@+id/storeReports"
+                        android:onClick="storeButton"
                         android:layout_marginLeft="11dp"
-                        android:src="@drawable/report"/>
+                        android:padding="10dp"
+                        android:src="@drawable/report" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
                         android:layout_gravity="center"
                         android:text="Reports"
-                        android:textSize="17dp"
-                        />
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -118,7 +115,6 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/viewStores"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -132,7 +128,6 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_margin="16dp"
                     android:orientation="vertical">
 
@@ -140,18 +135,19 @@
 
                         android:layout_width="85dp"
                         android:layout_height="85dp"
-                        android:padding="10dp"
+                        android:id="@+id/viewStores"
+                        android:onClick="storeButton"
                         android:layout_gravity="center"
+                        android:padding="10dp"
                         android:src="@drawable/shop" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="View Stores"
                         android:layout_gravity="center"
-                        android:textSize="17dp"/>
-
+                        android:text="View Stores"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -159,7 +155,6 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/storeProducts"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -173,7 +168,6 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_margin="16dp"
                     android:orientation="vertical">
 
@@ -181,15 +175,18 @@
 
                         android:layout_width="85dp"
                         android:layout_height="85dp"
+                        android:id="@+id/storeProducts"
+                        android:onClick="storeButton"
                         android:padding="10dp"
-                        android:src="@drawable/tags"/>
+                        android:src="@drawable/tags" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
+                        android:layout_gravity="center"
                         android:text="Products"
-                        android:textSize="17dp"/>
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -208,7 +205,5 @@
         app:menu="@menu/bottom_nav_menu" />
 
 </RelativeLayout>
-
-
 
 

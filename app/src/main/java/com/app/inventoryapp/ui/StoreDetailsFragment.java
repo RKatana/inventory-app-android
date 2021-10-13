@@ -1,6 +1,5 @@
 package com.app.inventoryapp.ui;
 
-import android.app.GameManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;

@@ -17,8 +17,7 @@ import com.app.inventoryapp.ui.AttendantLoginActivity;
 import com.app.inventoryapp.ui.OwnerLoginActivity;
 import com.app.inventoryapp.ui.SelectAccountActivity;
 
-//This configures your android to ignore the api version.
-@Config(sdk = {Build.VERSION_CODES.O_MR1})
+
 
 @RunWith(RobolectricTestRunner.class)
 public class SelectAccountActivityTest {

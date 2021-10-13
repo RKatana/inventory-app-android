@@ -37,6 +37,28 @@
                     android:textSize="22sp"
                     android:textStyle="normal|italic" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:text="Last Entry Date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView7"
+                        android:layout_weight="1"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:text="25/08/2017"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dateText"
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:textColor="#338822" />
+                </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -77,21 +99,75 @@
             android:background="#dddddd"
             android:padding="10dp">
 
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gone_layout"
+                android:visibility="gone">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:text="Quantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView11" />
+
+                        <TextView
+                            android:text="98"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/phone"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Address"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addr"
+                    android:textColor="#000000"
+                    android:text="Lorem ipsum doloru oblique commune propriae. Nam diam cotidieque ut. Te torquatos scribentur cum, ius an persius quaeque bonorum. Fabellas intellegat ius id, delicata consetetur adversarium ut vel.
+"
+                    android:layout_marginBottom="5dp" />
+            </LinearLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:text="View Product"
-                    android:textSize="10sp"
-                    android:id="@+id/updatebtn"
-                    style="@style/Widget.AppCompat.Button"
-                    android:elevation="14dp"
-                    android:background="#eeeeee" />
 
                 <ImageView
-                    android:id="@+id/editbutton"
+                    android:id="@+id/editButton"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
@@ -101,19 +177,17 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:id="@+id/deletebutton"
+                    android:id="@+id/deleteButton"
                     android:layout_marginRight="50dp"
                     android:src="@drawable/ic_baseline_delete_24"
                     android:layout_alignParentTop="true"
                     android:layout_centerVertical="true"
-                    android:layout_toStartOf="@+id/editbutton"
+                    android:layout_toStartOf="@+id/editButton"
                     android:layout_marginEnd="17dp" />
             </RelativeLayout>
 
 
         </LinearLayout>
-
-
 
 
     </LinearLayout>

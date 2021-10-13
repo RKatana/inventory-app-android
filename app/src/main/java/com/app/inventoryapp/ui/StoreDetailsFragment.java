@@ -76,20 +76,21 @@ public class StoreDetailsFragment extends Fragment{
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.products:
-                        Toast.makeText(getActivity(), "Product selected", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getActivity(), ProductsActivity.class);
-                        startActivity(intent);
+                    case R.id.Profile:
+                        Toast.makeText(getActivity(), "Profile selected", Toast.LENGTH_SHORT).show();
 
                         break;
                     case R.id.home:
                         Toast.makeText(getActivity(), "You are in Home section", Toast.LENGTH_SHORT).show();
-
+                        Intent homeIntent = new Intent(getActivity(), MainActivity.class);
+                        homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(homeIntent);
 
                         break;
                     case R.id.Clerk:
                         Toast.makeText(getActivity(), "Clerk selected", Toast.LENGTH_SHORT).show();
                         Intent clerkIntent = new Intent(getActivity(), MyClerksDashBoardActivity.class);
+                        clerkIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(clerkIntent);
 
 

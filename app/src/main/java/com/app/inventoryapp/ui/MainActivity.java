@@ -119,10 +119,17 @@ public class MainActivity extends AppCompatActivity
 
 
         } else if (id == R.id.ProductList) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.ProductList, new Products()).commit();
+            Intent i = new Intent(this, ProductsActivity.class);
+            startActivity(i);
 
+        }else if (id == R.id.AddStore) {
+            Intent i = new Intent(this, AddStoreActivity.class);
+            startActivity(i);
+
+        }else if (id == R.id.logout) {
+            Toast.makeText(this, "LogOut: Selected", Toast.LENGTH_LONG).show();
         }
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -140,6 +147,8 @@ public class MainActivity extends AppCompatActivity
 
         }else if (R.id.viewStores == id) {
             Toast.makeText(this, "To be implemented", Toast.LENGTH_LONG).show();
+            Intent i = new Intent(this, StoresDashboardActivity.class);
+            startActivity(i);
 
         }else if (R.id.storeReports == id) {
             Toast.makeText(this, "To be implemented", Toast.LENGTH_LONG).show();

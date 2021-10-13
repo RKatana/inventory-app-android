@@ -55,7 +55,6 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.Stor
         holder.mStoreName.setText(mStores.get(position).getName());
         holder.mStoreLocation.setText(mStores.get(position).getLocation());
         holder.mStoreProducts.setText((CharSequence) mStores.get(position).getProducts());
-        holder.mStoreAdmin.setText((CharSequence) mStores.get(position).getAttendants());
 
     }
 
@@ -69,9 +68,6 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.Stor
         @BindView(R.id.storeName) TextView mStoreName;
         @BindView(R.id.storeLocation) TextView mStoreLocation;
         @BindView(R.id.storeProducts) TextView mStoreProducts;
-        @BindView(R.id.viewStores) TextView mViewStores;
-        @BindView(R.id.storeReports) TextView mStoreReports;
-        @BindView(R.id.storeAdmin) TextView mStoreAdmin;
 
 
         public StoreViewHolder(@NonNull View itemView) {
@@ -83,9 +79,6 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.Stor
             mStoreName =(TextView) itemView.findViewById(R.id.storeName);
             mStoreLocation =(TextView) itemView.findViewById(R.id.storeLocation);
             mStoreProducts =(TextView) itemView.findViewById(R.id.storeProducts);
-            mViewStores =(TextView) itemView.findViewById(R.id.viewStores);
-            mStoreAdmin =(TextView) itemView.findViewById(R.id.storeAdmin);
-            mStoreReports =(TextView) itemView.findViewById(R.id.storeReports);
             mContext = itemView.getContext();
             itemView.setOnClickListener(this);
         }
@@ -93,7 +86,6 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.Stor
         public void bindStore (Store store){
             mStoreName.setText(store.getName());
             mStoreLocation.setText(store.getLocation());
-            mStoreAdmin.setText((CharSequence) store.getAttendants());
             mStoreProducts.setText((CharSequence) store.getProducts());
         }
 

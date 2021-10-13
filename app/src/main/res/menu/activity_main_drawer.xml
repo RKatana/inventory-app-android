@@ -21,11 +21,6 @@
             android:icon="@drawable/ic_baseline_library_add_24"/>
 
         <item
-            android:id="@+id/Clerk"
-            android:title="Clerks"
-            android:icon="@drawable/ic_baseline_person_add_alt_1_24"/>
-
-        <item
             android:id="@+id/logout"
             android:title="LogOut"
             android:icon="@drawable/ic_baseline_logout_24"/>

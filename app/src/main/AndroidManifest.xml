@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.reports"
+            android:name=".ui.AddProduct"
+            android:exported="true" />
+        <activity
+            android:name=".ui.UpdateProduct"
             android:exported="true" />
         <activity
             android:name=".ui.MainActivity"
@@ -62,12 +65,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.MyAdminsDashBoardActivity"
-            android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:exported="true" />
         <activity
             android:name=".ui.MyClerksDashBoardActivity"
-            android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:exported="true" />
         <activity
             android:name=".ui.SplashScreen"
             android:exported="true">

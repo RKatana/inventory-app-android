@@ -11,16 +11,26 @@ public class Product {
     private int spoilt;
     private boolean paymentStatus;
     private int store_id;
+    private String  date;
 
-    public Product(String name, int quantity, int buyingPrice, int sellingPrice, int spoilt) {
+    public Product(String name, int quantity, int buyingPrice, int sellingPrice, int spoilt,String date) {
         this.id = id;
         this.name = name;
         this.quantity = quantity;
         this.buyingPrice = buyingPrice;
         this.sellingPrice = sellingPrice;
         this.spoilt = spoilt;
+        this.date = date;
         this.paymentStatus = paymentStatus;
         this.store_id = store_id;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public int getId() {
@@ -98,6 +108,7 @@ public class Product {
                 ", spoilt=" + spoilt +
                 ", paymentStatus=" + paymentStatus +
                 ", store_id=" + store_id +
+                ", date='" + date + '\'' +
                 '}';
     }
 }

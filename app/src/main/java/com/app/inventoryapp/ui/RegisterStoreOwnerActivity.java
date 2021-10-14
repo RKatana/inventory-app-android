@@ -43,7 +43,7 @@ public class RegisterStoreOwnerActivity extends AppCompatActivity implements Vie
             startActivity(intent);
         }
         if (view == mCreateStoreOwner){
-            Intent intent = new Intent(RegisterStoreOwnerActivity.this, AddStoreActivity.class);
+            Intent intent = new Intent(RegisterStoreOwnerActivity.this, MainActivity.class);
             startActivity(intent);
         }
 

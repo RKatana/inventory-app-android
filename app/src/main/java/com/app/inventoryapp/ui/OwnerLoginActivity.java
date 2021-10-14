@@ -39,5 +39,10 @@ public class OwnerLoginActivity extends AppCompatActivity implements View.OnClic
             startActivity(intent);
         }
 
+        if(view == mPasswordLoginButton){
+            Intent intent = new Intent(OwnerLoginActivity.this, MainActivity.class);
+            startActivity(intent);
+        }
+
     }
 }

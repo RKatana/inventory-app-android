@@ -14,6 +14,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class AddStoreAdminActivity extends AppCompatActivity implements View.OnClickListener{
+
     @BindView(R.id.AddAdminButton) Button mAddAdminButton;
     @BindView(R.id.usernameEditText) EditText mUsernameEditText;
     @BindView(R.id.passwordEditText) EditText mPasswordEditText;

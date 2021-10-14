@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="@android:color/white"
-            android:hint="Username"
+            android:hint="Email"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             android:nextFocusDown="@+id/passwordEditText"
@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:text="Attendant Login"
+        android:text="Attendant"
         android:textColor="@color/white"
         android:textSize="30dp"
         android:textStyle="bold" />

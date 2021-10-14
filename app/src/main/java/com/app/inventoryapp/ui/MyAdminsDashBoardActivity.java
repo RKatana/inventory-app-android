@@ -47,5 +47,6 @@ public class MyAdminsDashBoardActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setVisibility(View.VISIBLE);
+
     }
 }

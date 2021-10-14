@@ -1,5 +1,7 @@
 package com.app.inventoryapp.models;
 
+import org.parceler.Parcel;
+
 public class Attendant {
     private int id;
     private String email;

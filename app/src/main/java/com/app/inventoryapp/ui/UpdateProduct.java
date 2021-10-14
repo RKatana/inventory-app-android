@@ -23,7 +23,7 @@ public class UpdateProduct extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_product);
+        setContentView(R.layout.update_product);
 
         setTitle("Update Product");
 

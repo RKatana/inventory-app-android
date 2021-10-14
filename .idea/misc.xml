@@ -26,6 +26,7 @@
         <entry key="app/src/main/res/layout/activity_add_store_admin.xml" value="0.15885416666666666" />
         <entry key="app/src/main/res/layout/activity_attendant_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/activity_my_admins_dash_board.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/activity_my_clerks_dash_board.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/activity_owner_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_products.xml" value="0.15" />
@@ -55,6 +56,7 @@
         <entry key="app/src/main/res/layout/products_list_item.xml" value="0.22" />
         <entry key="app/src/main/res/layout/reports_display.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/stores_list_item.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/update_product.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.33" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.18823529411764706" />
         <entry key="app/src/main/res/menu/main.xml" value="0.16822916666666668" />

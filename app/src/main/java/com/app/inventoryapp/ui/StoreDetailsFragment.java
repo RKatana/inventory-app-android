@@ -81,6 +81,7 @@ public class StoreDetailsFragment extends Fragment{
                         Intent GraphIntent = new Intent(getActivity(), GraphReportActivity.class);
                         startActivity(GraphIntent);
 
+
                         break;
                     case R.id.home:
                         Toast.makeText(getActivity(), "You are in Home section", Toast.LENGTH_SHORT).show();

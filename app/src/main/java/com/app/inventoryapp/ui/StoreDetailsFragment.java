@@ -78,6 +78,8 @@ public class StoreDetailsFragment extends Fragment{
                 switch (item.getItemId()) {
                     case R.id.Profile:
                         Toast.makeText(getActivity(), "Profile selected", Toast.LENGTH_SHORT).show();
+                        Intent GraphIntent = new Intent(getActivity(), GraphReportActivity.class);
+                        startActivity(GraphIntent);
 
                         break;
                     case R.id.home:
@@ -92,7 +94,6 @@ public class StoreDetailsFragment extends Fragment{
                         Intent clerkIntent = new Intent(getActivity(), MyClerksDashBoardActivity.class);
                         clerkIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(clerkIntent);
-
 
                         break;
                     default:

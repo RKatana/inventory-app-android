@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/lightPrimaryColor"
+    android:background="@drawable/bg"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,7 +10,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg"
         android:orientation="vertical"
         android:weightSum="10">
 
@@ -19,20 +18,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="100dp"
             android:text="STORE ONE"
             android:textColor="#F57C00"
-            android:textSize="30sp"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
         <GridLayout
             android:id="@+id/mainGridLayout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="13dp"
-            android:layout_weight="8"
+            android:layout_marginTop="30dp"
+            android:layout_weight="6"
             android:alignmentMode="alignMargins"
             android:columnCount="2"
             android:columnOrderPreserved="false"
@@ -40,6 +37,7 @@
             android:rowCount="2">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/storeAdmin"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -50,32 +48,37 @@
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical">
+                    android:layout_gravity="center">
 
                     <ImageView
-                        android:layout_width="85dp"
-                        android:layout_height="85dp"
-                        android:id="@+id/storeAdmin"
-                        android:onClick="storeButton"
+                        android:id="@+id/image1"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_centerHorizontal="true"
                         android:padding="10dp"
                         android:src="@drawable/admin" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_below="@+id/image1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/admin"
                         android:text="My Admins"
-                        android:textSize="14dp"
+                        android:textSize="17sp"
                         android:textStyle="bold" />
 
-                </LinearLayout>
+                </RelativeLayout>
+
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/storeReports"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -86,35 +89,34 @@
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical">
+                    android:layout_gravity="center">
 
                     <ImageView
-                        android:layout_width="85dp"
-                        android:layout_height="85dp"
-                        android:id="@+id/storeReports"
-                        android:onClick="storeButton"
-                        android:layout_marginLeft="11dp"
+                        android:id="@+id/image2"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="11dp"
                         android:padding="10dp"
                         android:src="@drawable/report" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_below="@+id/image2"
+                        android:layout_centerHorizontal="true"
                         android:text="Reports"
-                        android:textSize="14dp"
+                        android:textSize="17sp"
                         android:textStyle="bold" />
-
-
-                </LinearLayout>
+                </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/viewStores"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -125,36 +127,35 @@
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical">
+                    android:layout_gravity="center">
 
                     <ImageView
-
-                        android:layout_width="85dp"
-                        android:layout_height="85dp"
-                        android:id="@+id/viewStores"
-                        android:onClick="storeButton"
-                        android:layout_gravity="center"
+                        android:id="@+id/image3"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_centerHorizontal="true"
                         android:padding="10dp"
                         android:src="@drawable/shop" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_below="@+id/image3"
+                        android:layout_centerHorizontal="true"
                         android:layout_gravity="center"
                         android:text="View Stores"
-                        android:textSize="14dp"
+                        android:textSize="17sp"
                         android:textStyle="bold" />
 
-
-                </LinearLayout>
+                </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/storeProducts"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -165,31 +166,29 @@
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical">
+                    android:layout_gravity="center">
 
                     <ImageView
-
-                        android:layout_width="85dp"
-                        android:layout_height="85dp"
-                        android:id="@+id/storeProducts"
-                        android:onClick="storeButton"
+                        android:id="@+id/image4"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="11dp"
                         android:padding="10dp"
                         android:src="@drawable/tags" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_below="@+id/image4"
+                        android:layout_centerHorizontal="true"
                         android:text="Products"
-                        android:textSize="14dp"
+                        android:textSize="17sp"
                         android:textStyle="bold" />
-
-
-                </LinearLayout>
+                </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 

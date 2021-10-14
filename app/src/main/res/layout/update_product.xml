@@ -125,8 +125,7 @@
                 android:layout_weight="1"
                 android:background="?attr/colorPrimary"
                 android:layout_margin="5dp"
-                android:textColor="@android:color/white"
-                android:onClick="clear" />
+                android:textColor="@android:color/white" />
 
             <Button
                 android:id="@+id/btn_add"
@@ -136,8 +135,7 @@
                 android:layout_weight="1"
                 android:background="?attr/colorPrimary"
                 android:layout_margin="5dp"
-                android:textColor="@android:color/white"
-                android:onClick="updateInfo"/>
+                android:textColor="@android:color/white" />
         </LinearLayout>
 
     </LinearLayout>

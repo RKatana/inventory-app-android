@@ -34,7 +34,7 @@
         <entry key="app/src/main/res/layout/activity_reports.xml" value="0.12407407407407407" />
         <entry key="app/src/main/res/layout/activity_select_account.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.2421875" />
-        <entry key="app/src/main/res/layout/activity_store_details.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_store_details.xml" value="0.15" />
         <entry key="app/src/main/res/layout/activity_stores_dashboard.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_update_product.xml" value="0.33" />
         <entry key="app/src/main/res/layout/add_product2.xml" value="0.16822916666666668" />
@@ -48,7 +48,7 @@
         <entry key="app/src/main/res/layout/fragment_products.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/fragment_store_detail.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/fragment_store_details.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_store_details.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/ic_user.xml" value="0.14" />
         <entry key="app/src/main/res/layout/main_dashboard.xml" value="0.1" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.33" />

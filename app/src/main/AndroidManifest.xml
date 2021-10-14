@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:allowBackup="true"
+        android:fullBackupOnly="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -36,24 +36,21 @@
             android:exported="true" />
         <activity
             android:name=".ui.RegisterStoreOwnerActivity"
-            android:exported="true"
-            android:screenOrientation="portrait">
+            android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.OwnerLoginActivity" />
         </activity>
         <activity
             android:name=".ui.OwnerLoginActivity"
-            android:exported="true"
-            android:screenOrientation="portrait">
+            android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.app.inventoryapp.ui.SelectAccountActivity" />
         </activity>
         <activity
             android:name=".ui.AttendantLoginActivity"
-            android:exported="true"
-            android:screenOrientation="portrait">
+            android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.app.inventoryapp.ui.SelectAccountActivity" />
@@ -61,7 +58,6 @@
         <activity
             android:name=".ui.SelectAccountActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.MyAdminsDashBoardActivity"

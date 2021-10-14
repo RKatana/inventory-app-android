@@ -78,6 +78,8 @@ public class StoreDetailsFragment extends Fragment{
                 switch (item.getItemId()) {
                     case R.id.Profile:
                         Toast.makeText(getActivity(), "Profile selected", Toast.LENGTH_SHORT).show();
+                        Intent GraphIntent = new Intent(getActivity(), GraphReportActivity.class);
+                        startActivity(GraphIntent);
 
                         break;
                     case R.id.home:

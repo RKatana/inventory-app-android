@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity
     public static int flag = 0;
     public static FloatingActionButton fab;
 
-
     private TextView storeProducts;
 
     @Override

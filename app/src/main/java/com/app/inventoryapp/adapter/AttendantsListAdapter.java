@@ -48,6 +48,7 @@ public class AttendantsListAdapter extends RecyclerView.Adapter<AttendantsListAd
     public class AttendantsViewHolder extends RecyclerView.ViewHolder{
 
         @BindView(R.id.attendantName) TextView mAttendantTextView;
+        @BindView(R.id.attendantEmail) TextView mAttendantEmailTextView;
 
         public AttendantsViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -55,7 +56,8 @@ public class AttendantsListAdapter extends RecyclerView.Adapter<AttendantsListAd
             mContext = itemView.getContext();
         }
         public void bindProduct (Attendant attendant){
-            mAttendantTextView.setText(attendant.getEmail());
+            mAttendantTextView.setText(attendant.getName());
+            mAttendantEmailTextView.setText(attendant.getEmail());
         }
     }
 }

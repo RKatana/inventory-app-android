@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="100dp"
-            android:text="STORE ONE"
+            android:text="@string/store_one"
             android:textColor="#F57C00"
             android:textSize="40sp"
             android:textStyle="bold" />
@@ -68,7 +68,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_gravity="center"
                         android:src="@drawable/admin"
-                        android:text="My Admins"
+                        android:text="@string/my_admins"
                         android:textSize="17sp"
                         android:textStyle="bold" />
 
@@ -108,7 +108,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/image2"
                         android:layout_centerHorizontal="true"
-                        android:text="Reports"
+                        android:text="@string/reports"
                         android:textSize="17sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -137,6 +137,7 @@
                         android:layout_width="65dp"
                         android:layout_height="65dp"
                         android:layout_centerHorizontal="true"
+                        android:onClick="storeButton"
                         android:padding="10dp"
                         android:src="@drawable/shop" />
 
@@ -146,7 +147,7 @@
                         android:layout_below="@+id/image3"
                         android:layout_centerHorizontal="true"
                         android:layout_gravity="center"
-                        android:text="View Stores"
+                        android:text="@string/view_stores"
                         android:textSize="17sp"
                         android:textStyle="bold" />
 
@@ -177,6 +178,7 @@
                         android:layout_height="65dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginStart="11dp"
+                        android:onClick="storeButton"
                         android:padding="10dp"
                         android:src="@drawable/tags" />
 
@@ -185,7 +187,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/image4"
                         android:layout_centerHorizontal="true"
-                        android:text="Products"
+                        android:text="@string/products"
                         android:textSize="17sp"
                         android:textStyle="bold" />
                 </RelativeLayout>

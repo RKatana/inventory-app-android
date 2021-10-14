@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -25,10 +26,8 @@ import butterknife.ButterKnife;
 
 public class ProductsActivity extends AppCompatActivity {
 
-    @BindView(R.id.ProductTextView) TextView mProductTextView;
+    @BindView(R.id.addProduct) TextView mAddProduct;
     @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
-    @BindView(R.id.errorTextView) TextView mErrorTextView;
-    @BindView(R.id.progressBar) ProgressBar mProgressBar;
 
     private ImageView editButton, deleteButton;
 
@@ -62,6 +61,18 @@ public class ProductsActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().show();
         }
+
+        mAddProduct = (Button) findViewById(R.id.addProduct);
+        mAddProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view == mAddProduct){
+                    Intent intent = new Intent(ProductsActivity.this, AddProduct.class);
+                    startActivity(intent);
+                }
+            }
+        });
+
 
     }
 }

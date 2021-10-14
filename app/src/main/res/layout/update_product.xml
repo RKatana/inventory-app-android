@@ -106,7 +106,6 @@
             <EditText
                 android:id="@+id/dateText"
                 android:layout_width="match_parent"
-
                 android:maxLines="1"
                 android:layout_height="wrap_content"
                 android:hint="Date" />

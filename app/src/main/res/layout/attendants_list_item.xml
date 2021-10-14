@@ -17,12 +17,12 @@
             android:orientation="horizontal"
             android:baselineAligned="false"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1">
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="10dp">
@@ -89,7 +89,6 @@
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:id="@+id/deleteButton"
-                            android:layout_marginRight="50dp"
                             android:src="@drawable/ic_baseline_delete_24"
                             android:layout_alignParentTop="true"
                             android:layout_centerVertical="true"
@@ -100,7 +99,6 @@
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:id="@+id/activateButton"
-                            android:layout_marginRight="50dp"
                             android:src="@drawable/ic_baseline_do_not_disturb_24"
                             android:layout_alignParentTop="true"
                             android:layout_centerVertical="true"

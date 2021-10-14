@@ -68,7 +68,11 @@
             android:exported="true" />
         <activity
             android:name=".ui.MyClerksDashBoardActivity"
-            android:exported="true" />
+            android:exported="true" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".ui.OwnerLoginActivity" />
+        </activity>
         <activity
             android:name=".ui.SplashScreen"
             android:exported="true">

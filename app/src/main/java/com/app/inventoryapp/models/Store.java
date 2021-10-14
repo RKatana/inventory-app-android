@@ -1,5 +1,7 @@
 package com.app.inventoryapp.models;
 
+import org.parceler.Parcel;
+
 import java.util.ArrayList;
 
 public class Store {

@@ -58,7 +58,7 @@ public class StoreDetailsFragment extends Fragment{
         getActivity().setTitle("Home");
 
         initViews(view);
-        initBottomNavigation();
+//        initBottomNavigation();
 
        // ButterKnife.bind(this, view);
        // mStoreProducts.setOnClickListener(this);
@@ -68,40 +68,40 @@ public class StoreDetailsFragment extends Fragment{
         return view;
     }
 
-    private void initBottomNavigation() {
-        Log.d(TAG, "initBottomNavigation: selected");
-        bottomNavigationView.setSelectedItemId(R.id.home);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.Profile:
-                        Toast.makeText(getActivity(), "Profile selected", Toast.LENGTH_SHORT).show();
-
-                        break;
-                    case R.id.home:
-                        Toast.makeText(getActivity(), "You are in Home section", Toast.LENGTH_SHORT).show();
-                        Intent homeIntent = new Intent(getActivity(), MainActivity.class);
-                        homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(homeIntent);
-
-                        break;
-                    case R.id.Clerk:
-                        Toast.makeText(getActivity(), "Clerk selected", Toast.LENGTH_SHORT).show();
-                        Intent clerkIntent = new Intent(getActivity(), MyClerksDashBoardActivity.class);
-                        clerkIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(clerkIntent);
-
-
-                        break;
-                    default:
-                        break;
-
-                }
-                return true;
-            }
-        });
-    }
+//    private void initBottomNavigation() {
+//        Log.d(TAG, "initBottomNavigation: selected");
+//        bottomNavigationView.setSelectedItemId(R.id.home);
+//        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                switch (item.getItemId()) {
+//                    case R.id.Profile:
+//                        Toast.makeText(getActivity(), "Profile selected", Toast.LENGTH_SHORT).show();
+//
+//                        break;
+//                    case R.id.home:
+//                        Toast.makeText(getActivity(), "You are in Home section", Toast.LENGTH_SHORT).show();
+//                        Intent homeIntent = new Intent(getActivity(), MainActivity.class);
+//                        homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//                        startActivity(homeIntent);
+//
+//                        break;
+//                    case R.id.Clerk:
+//                        Toast.makeText(getActivity(), "Clerk selected", Toast.LENGTH_SHORT).show();
+//                        Intent clerkIntent = new Intent(getActivity(), MyClerksDashBoardActivity.class);
+//                        clerkIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//                        startActivity(clerkIntent);
+//
+//
+//                        break;
+//                    default:
+//                        break;
+//
+//                }
+//                return true;
+//            }
+//        });
+//    }
 
     private void initViews(View view) {
         Log.d(TAG,"initViews: started");

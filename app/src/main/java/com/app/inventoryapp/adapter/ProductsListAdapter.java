@@ -60,27 +60,11 @@ public class ProductsListAdapter extends RecyclerView.Adapter<ProductsListAdapte
         holder.deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder alert = new AlertDialog.Builder(mContext);
-                alert.setTitle("Alert!!");
-                alert.setMessage("Are you sure to delete this product?");
 
-                alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-
-                    }
-                });
-
-                alert.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
             }
 
         });
+
     }
 
     @Override

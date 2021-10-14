@@ -24,7 +24,7 @@ public class AddProduct extends AppCompatActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_product);
+        setContentView(R.layout.add_product2);
 
         productLayout = (TextInputLayout) findViewById(R.id.productLayout);
         paymentStatusLayout = (TextInputLayout) findViewById(R.id.paymentStatusLayout);

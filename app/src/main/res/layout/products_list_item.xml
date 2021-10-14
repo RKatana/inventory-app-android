@@ -16,6 +16,7 @@
 
         <LinearLayout
             android:orientation="horizontal"
+            android:baselineAligned="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1">
@@ -181,7 +182,7 @@
 
             <LinearLayout
                 android:layout_width="220dp"
-                android:layout_height="92dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/accentColor"
                 android:orientation="vertical"
@@ -192,10 +193,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
                     android:text="Payment status"
                     android:textColor="#000000"
-                    android:textSize="10sp" />
+                    android:textSize="11sp" />
 
 
                 <TextView
@@ -217,28 +218,7 @@
             android:background="#dddddd"
             android:padding="10dp">
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/gone_layout"
-                android:visibility="gone">
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
 
-
-
-
-
-
-
-
-
-                </LinearLayout>
-            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"

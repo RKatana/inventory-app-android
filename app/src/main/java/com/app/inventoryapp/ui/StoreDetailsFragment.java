@@ -83,7 +83,7 @@ public class StoreDetailsFragment extends Fragment implements View.OnClickListen
                         break;
                     case R.id.Clerk:
                         Toast.makeText(getActivity(), "Clerk selected", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getActivity(), MyClerksDashBoardActivity.class);
+                        Intent intent = new Intent(getActivity(), GraphReportActivity.class);
                         startActivity(intent);
 
 

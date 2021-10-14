@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ui.AddClerkActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.AddProduct"
             android:exported="true" />
         <activity
@@ -27,7 +30,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.ProductsActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="Products" />
         <activity
             android:name=".ui.StoresDashboardActivity"
             android:exported="true" />
@@ -67,7 +71,11 @@
             android:exported="true" />
         <activity
             android:name=".ui.MyClerksDashBoardActivity"
-            android:exported="true" />
+            android:exported="true" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".ui.OwnerLoginActivity" />
+        </activity>
         <activity
             android:name=".ui.SplashScreen"
             android:exported="true">

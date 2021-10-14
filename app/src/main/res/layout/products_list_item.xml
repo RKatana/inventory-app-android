@@ -236,7 +236,6 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:id="@+id/deleteButton"
-                    android:layout_marginRight="50dp"
                     android:src="@drawable/ic_baseline_delete_24"
                     android:layout_alignParentTop="true"
                     android:layout_centerVertical="true"

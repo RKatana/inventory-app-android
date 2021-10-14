@@ -3,9 +3,11 @@ package com.app.inventoryapp.ui;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
@@ -20,6 +22,7 @@ public class AddProduct extends AppCompatActivity implements View.OnClickListene
     private TextInputLayout productLayout,productQuantityLayout, productSpoiltLayout, productSpLayout, productBpLayout, paymentStatusLayout, dateLayout;
     private EditText ProductName, productQuantity,paymentStatus, productSp, productBp, productSpoilt,dateText;
     private int mYear, mMonth, mDay;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +44,10 @@ public class AddProduct extends AppCompatActivity implements View.OnClickListene
         dateText.setInputType(InputType.TYPE_NULL);
         dateText.setFocusable(false);
         dateText.setOnClickListener(this);
+
     }
 
-    public void addInfo(View v) {
+    public void addProduct(View v) {
         String name = ProductName.getText().toString();
         String quantity = productQuantity.getText().toString();
         String sellingPrice = productSp.getText().toString();
@@ -129,6 +133,7 @@ public class AddProduct extends AppCompatActivity implements View.OnClickListene
             }
         }, mYear, mMonth, mDay);
         datePickerDialog.show();
+
 
     }
 }

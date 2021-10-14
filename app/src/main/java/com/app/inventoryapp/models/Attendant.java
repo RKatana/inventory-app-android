@@ -4,17 +4,27 @@ import org.parceler.Parcel;
 
 public class Attendant {
     private int id;
+    private String name;
     private String email;
     private String password;
     private String accessLevel;
     private int store_id;
 
-    public Attendant(String email, String password,String accessLevel) {
+    public Attendant(String name, String email, String password,String accessLevel) {
         this.id = id;
+        this.name = name;
         this.email = email;
         this.password = password;
         this.accessLevel = accessLevel;
         this.store_id = store_id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getId() {
@@ -61,6 +71,7 @@ public class Attendant {
     public String toString() {
         return "Attendant{" +
                 "id=" + id +
+                ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", accessLevel='" + accessLevel + '\'' +

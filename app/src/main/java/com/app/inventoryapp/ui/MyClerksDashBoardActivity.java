@@ -52,7 +52,7 @@ public class MyClerksDashBoardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (view == mCreateStoreClerk){
-                    Intent intent = new Intent(MyClerksDashBoardActivity.this, AddClerkActivity.class);
+                    Intent intent = new Intent(MyClerksDashBoardActivity.this, AddStoreAdminActivity.class);
                     startActivity(intent);
                 }
             }

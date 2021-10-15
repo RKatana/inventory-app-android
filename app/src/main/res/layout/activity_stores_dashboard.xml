@@ -10,19 +10,19 @@
 
 
     <RelativeLayout
+        android:id="@+id/sectionOne"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/sectionOne">
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/storeLists"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Available Stores"
             android:layout_centerHorizontal="true"
-            android:textSize="20dp"
+            android:text="Available Stores"
             android:textColor="@color/white"
-            android:textStyle="italic"/>
+            android:textSize="20dp"
+            android:textStyle="italic" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/storeRecyclerView"

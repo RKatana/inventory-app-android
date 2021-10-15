@@ -13,17 +13,6 @@
         android:orientation="vertical"
         android:weightSum="10">
 
-        <TextView
-            android:id="@+id/storeName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="100dp"
-            android:text="@string/store_one"
-            android:textColor="#F57C00"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-
         <GridLayout
             android:id="@+id/mainGridLayout"
             android:layout_width="match_parent"

@@ -137,20 +137,22 @@ public class MainActivity extends AppCompatActivity
 
     public void storeButton(View view) {
         int id = view.getId();
-        if (R.id.storeAdmin == id) {
+        if (R.id.image1 == id) {
             Intent i = new Intent(this, MyAdminsDashBoardActivity.class);
             startActivity(i);
-        }else if (R.id.storeProducts == id) {
+        }else if (R.id.image4 == id) {
             Intent i = new Intent(this, ProductsActivity.class);
             startActivity(i);
 
-        }else if (R.id.viewStores == id) {
-            Toast.makeText(this, "To be implemented", Toast.LENGTH_LONG).show();
+        }else if (R.id.image3 == id) {
+            Toast.makeText(this, "Stores", Toast.LENGTH_LONG).show();
             Intent i = new Intent(this, StoresDashboardActivity.class);
             startActivity(i);
 
-        }else if (R.id.storeReports == id) {
-            Toast.makeText(this, "To be implemented", Toast.LENGTH_LONG).show();
+        }else if (R.id.image2 == id) {
+            Toast.makeText(this, "Reports", Toast.LENGTH_LONG).show();
+            Intent i = new Intent(this, GraphReportActivity.class);
+            startActivity(i);
         }
     }
 

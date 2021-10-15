@@ -74,7 +74,7 @@
             android:exported="true" >
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value=".ui.OwnerLoginActivity" />
+            android:value=".ui.MainActivity" />
         </activity>
         <activity
             android:name=".ui.SplashScreen"

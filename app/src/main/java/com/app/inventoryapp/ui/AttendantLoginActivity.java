@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.app.inventoryapp.R;
 
@@ -34,9 +35,19 @@ public class AttendantLoginActivity extends AppCompatActivity implements View.On
     @Override
     public void onClick(View view) {
         if(view == mPasswordLoginButton){
+            String email = mEmailEditText.getText().toString();
+            String password = mPasswordEditText.getText().toString();
+
+            if (email.equals("") || password.equals("")) {
+                Toast.makeText(getApplicationContext(),"All fields are required",Toast.LENGTH_LONG).show();
+
+                return ;
+
+            }
             Intent intent = new Intent(AttendantLoginActivity.this, MainActivity.class);
             startActivity(intent);
+            Toast.makeText(getApplicationContext(),"Logged SuccessFul",Toast.LENGTH_LONG).show();
+            finish();
         }
-
     }
 }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.app.inventoryapp.R;
 
@@ -34,6 +35,8 @@ public class AddStoreActivity extends AppCompatActivity implements View.OnClickL
             Intent intent = new Intent(AddStoreActivity.this, AddStoreAdminActivity.class);
             intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK | intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
+            Toast.makeText(getApplicationContext(),"Added SuccessFul",Toast.LENGTH_LONG).show();
+            finish();
         }
     }
 }

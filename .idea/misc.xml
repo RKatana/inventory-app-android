@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-v24/ic_user.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-xhdpi/ic_user.xml" value="0.1287037037037037" />
+        <entry key="app/src/main/res/drawable/bg_icon.xml" value="0.1574074074074074" />
         <entry key="app/src/main/res/drawable/btn_bg.xml" value="0.184375" />
         <entry key="app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.184375" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_business_24.xml" value="0.184375" />
@@ -25,6 +26,7 @@
         <entry key="app/src/main/res/layout/activity_add_store.xml" value="0.25729166666666664" />
         <entry key="app/src/main/res/layout/activity_add_store_admin.xml" value="0.15885416666666666" />
         <entry key="app/src/main/res/layout/activity_attendant_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_graph_report.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="app/src/main/res/layout/activity_my_admins_dash_board.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/activity_my_clerks_dash_board.xml" value="0.16822916666666668" />
@@ -55,7 +57,7 @@
         <entry key="app/src/main/res/layout/navigation_header.xml" value="0.25" />
         <entry key="app/src/main/res/layout/products_list_item.xml" value="0.1986754966887417" />
         <entry key="app/src/main/res/layout/reports_display.xml" value="0.16822916666666668" />
-        <entry key="app/src/main/res/layout/stores_list_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/stores_list_item.xml" value="0.33" />
         <entry key="app/src/main/res/layout/update_product.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.33" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.18823529411764706" />

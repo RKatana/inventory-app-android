@@ -54,7 +54,6 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.Stor
         Log.d(TAG,"onBindViewHolder: called");
         holder.mStoreName.setText(mStores.get(position).getName());
         holder.mStoreLocation.setText(mStores.get(position).getLocation());
-        holder.mStoreProducts.setText((CharSequence) mStores.get(position).getProducts());
 
     }
 
@@ -67,7 +66,6 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.Stor
 
         @BindView(R.id.storeName) TextView mStoreName;
         @BindView(R.id.storeLocation) TextView mStoreLocation;
-        @BindView(R.id.storeProducts) TextView mStoreProducts;
 
 
         public StoreViewHolder(@NonNull View itemView) {
@@ -78,7 +76,6 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.Stor
 
             mStoreName =(TextView) itemView.findViewById(R.id.storeName);
             mStoreLocation =(TextView) itemView.findViewById(R.id.storeLocation);
-            mStoreProducts =(TextView) itemView.findViewById(R.id.storeProducts);
             mContext = itemView.getContext();
             itemView.setOnClickListener(this);
         }
@@ -86,7 +83,6 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.Stor
         public void bindStore (Store store){
             mStoreName.setText(store.getName());
             mStoreLocation.setText(store.getLocation());
-            mStoreProducts.setText((CharSequence) store.getProducts());
         }
 
         @Override

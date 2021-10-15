@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.app.inventoryapp.R;
 
@@ -17,6 +18,7 @@ public class AddStoreAdminActivity extends AppCompatActivity implements View.OnC
 
     @BindView(R.id.AddAdminButton) Button mAddAdminButton;
     @BindView(R.id.usernameEditText) EditText mUsernameEditText;
+    @BindView(R.id.emailEditText) EditText mEmailEditText;
     @BindView(R.id.passwordEditText) EditText mPasswordEditText;
 
     @Override
@@ -26,14 +28,17 @@ public class AddStoreAdminActivity extends AppCompatActivity implements View.OnC
         ButterKnife.bind(this);
 
         mAddAdminButton.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View view) {
         if(view == mAddAdminButton){
-            Intent intent = new Intent(AddStoreAdminActivity.this, StoresDashboardActivity.class);
+            Intent intent = new Intent(AddStoreAdminActivity.this, MainActivity.class);
             intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK | intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
+            Toast.makeText(getApplicationContext(),"Saved SuccessFul",Toast.LENGTH_LONG).show();
+            finish();
         }
     }
 }

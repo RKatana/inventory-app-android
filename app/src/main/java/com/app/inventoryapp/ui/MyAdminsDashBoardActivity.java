@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.app.inventoryapp.R;
 import com.app.inventoryapp.adapter.AttendantsListAdapter;
@@ -21,6 +23,7 @@ import butterknife.ButterKnife;
 public class MyAdminsDashBoardActivity extends AppCompatActivity {
 
     @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
+    @BindView(R.id.addAdminButton) Button mAddAdminButton;
 
     private AttendantsListAdapter mAdapter;
 
@@ -43,6 +46,18 @@ public class MyAdminsDashBoardActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setVisibility(View.VISIBLE);
+
+
+        mAddAdminButton = (Button) findViewById(R.id.addAdminButton);
+        mAddAdminButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view == mAddAdminButton){
+                    Intent intent = new Intent(MyAdminsDashBoardActivity.this, AddStoreAdminActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
 
 
 

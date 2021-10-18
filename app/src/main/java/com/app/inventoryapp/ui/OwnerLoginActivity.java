@@ -33,6 +33,10 @@ public class OwnerLoginActivity extends AppCompatActivity implements View.OnClic
 
         mRegisterTextView.setOnClickListener(this);
         mPasswordLoginButton.setOnClickListener(this);
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
     }
 
     @Override

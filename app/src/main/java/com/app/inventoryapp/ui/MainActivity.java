@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity
     private Toolbar toolbar;
     private FrameLayout frameLayout;
     public static int flag = 0;
-    public static FloatingActionButton fab;
 
     private TextView storeProducts;
 
@@ -54,8 +53,6 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.hide();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer);

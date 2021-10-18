@@ -44,7 +44,7 @@ public class AttendantLoginActivity extends AppCompatActivity implements View.On
                 return ;
 
             }
-            Intent intent = new Intent(AttendantLoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(AttendantLoginActivity.this, AdminActivity.class);
             startActivity(intent);
             Toast.makeText(getApplicationContext(),"Logged SuccessFul",Toast.LENGTH_LONG).show();
             finish();

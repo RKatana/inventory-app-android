@@ -30,6 +30,10 @@ public class AttendantLoginActivity extends AppCompatActivity implements View.On
         ButterKnife.bind(this);
 
         mPasswordLoginButton.setOnClickListener(this);
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
     }
 
     @Override
@@ -44,7 +48,7 @@ public class AttendantLoginActivity extends AppCompatActivity implements View.On
                 return ;
 
             }
-            Intent intent = new Intent(AttendantLoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(AttendantLoginActivity.this, ClerkActivity.class);
             startActivity(intent);
             Toast.makeText(getApplicationContext(),"Logged SuccessFul",Toast.LENGTH_LONG).show();
             finish();

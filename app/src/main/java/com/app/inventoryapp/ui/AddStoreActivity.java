@@ -3,12 +3,15 @@ package com.app.inventoryapp.ui;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.app.inventoryapp.Constants;
 import com.app.inventoryapp.R;
 
 import butterknife.BindView;
@@ -19,6 +22,9 @@ public class AddStoreActivity extends AppCompatActivity implements View.OnClickL
     @BindView(R.id.shopNameEditText) EditText mShopNameEditText;
     @BindView(R.id.locationEditText) EditText mLocationEditText;
 
+    private SharedPreferences mSharedPreferences;
+    private SharedPreferences.Editor mEditor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,16 +33,24 @@ public class AddStoreActivity extends AppCompatActivity implements View.OnClickL
 
         mAddStoreButton.setOnClickListener(this);
 
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        mEditor = mSharedPreferences.edit();
+
     }
 
     @Override
     public void onClick(View view) {
         if(view == mAddStoreButton){
+            String storeName = mShopNameEditText.getText().toString();
             Intent intent = new Intent(AddStoreActivity.this, AddStoreAdminActivity.class);
-            intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK | intent.FLAG_ACTIVITY_CLEAR_TASK);
+            addToSharedPreferences(storeName);
             startActivity(intent);
             Toast.makeText(getApplicationContext(),"Added SuccessFul",Toast.LENGTH_LONG).show();
             finish();
         }
+    }
+
+    private void addToSharedPreferences(String storeName){
+        mEditor.putString(Constants.PREFERENCES_STORE_KEY,storeName).apply();
     }
 }

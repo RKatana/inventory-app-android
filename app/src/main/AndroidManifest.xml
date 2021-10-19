@@ -12,6 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ui.ClerkActivity"
+            android:exported="true"
+            android:label="Clerk Online"/>
+        <activity
+            android:name=".ui.AdminActivity"
+            android:exported="true"
+            android:label="Admin Online" />
+        <activity
             android:name=".ui.AddClerkActivity"
             android:exported="true" />
         <activity
@@ -71,10 +79,10 @@
             android:exported="true" />
         <activity
             android:name=".ui.MyClerksDashBoardActivity"
-            android:exported="true" >
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".ui.MainActivity" />
+            android:exported="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity" />
         </activity>
         <activity
             android:name=".ui.SplashScreen"

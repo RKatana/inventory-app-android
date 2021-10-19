@@ -3,15 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightPrimaryColor"
+    android:background="@drawable/bgg"
     tools:context=".ui.AttendantLoginActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
         android:orientation="vertical"
         android:padding="30dp">
 
@@ -63,11 +62,11 @@
             android:id="@+id/passwordLoginButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:padding="10dp"
             android:text="Login"
             android:textColor="@color/white"
-            android:layout_gravity="center"
             tools:ignore="TextContrastCheck" />
 
 
@@ -78,9 +77,10 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
         android:text="Attendant"
-        android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
 </RelativeLayout>

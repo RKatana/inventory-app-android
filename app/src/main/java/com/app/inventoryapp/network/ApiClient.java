@@ -1,28 +1,41 @@
 package com.app.inventoryapp.network;
 
+
+import static com.app.inventoryapp.Constants.BASE_URL;
+
+import java.io.IOException;
+
+import okhttp3.Interceptor;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class ApiClient {
-    public static String BASE_URL ="https://jumpstock.herokuapp.com/authentication/auth/register/";
+public class ApiClient  {
     private static Retrofit retrofit = null;
-    public static ApiClient getClient(){
 
-        if(retrofit == null){
+    public static ApiService getClient() {
+
+        if (retrofit == null) {
+            OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                    .addInterceptor(new Interceptor() {
+                        @Override
+                        public Response intercept(Chain chain) throws IOException {
+                            Request newRequest  = chain.request().newBuilder()
+                                    .build();
+                            return chain.proceed(newRequest);
+                        }
+                    })
+                    .build();
+
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
+                    .client(okHttpClient)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
-        ApiClient api = retrofit.create(ApiClient.class);
 
-        return api;
+        return retrofit.create(ApiService.class);
     }
-
-
-
-
-
-
-
 }

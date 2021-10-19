@@ -27,6 +27,7 @@
                 style="@style/viewParent.headerText"
                 android:text="Products"
                 android:id="@+id/storeProducts"
+                android:onClick="adminButton"
                 android:clickable="true"
                 android:textColor="@color/primaryTextColor"
                 android:focusable="true" />

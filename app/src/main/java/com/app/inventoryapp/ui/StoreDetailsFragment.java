@@ -15,6 +15,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -24,6 +25,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.app.inventoryapp.Constants;
 import com.app.inventoryapp.R;
 import com.app.inventoryapp.models.Store;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -36,17 +38,29 @@ import butterknife.ButterKnife;
 public class StoreDetailsFragment extends Fragment{
 
     private static final String TAG = "StoreDetailsFragment ";
+    @BindView(R.id.user1Name) TextView userNameView;
     private BottomNavigationView bottomNavigationView;
 
     private TextView textView;
     private CardView cardView;
     private View view;
 
+    private SharedPreferences mSharedPreferences;
+    private String mStoreName;
+    private String mUserName;
+
+
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        mStoreName = mSharedPreferences.getString(Constants.PREFERENCES_STORE_KEY,null);
+        mUserName = mSharedPreferences.getString(Constants.PREFERENCES_USERNAME,null);
+
 
     }
 
@@ -56,7 +70,10 @@ public class StoreDetailsFragment extends Fragment{
                              @Nullable Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_store_details, container, false);
-        getActivity().setTitle("Home");
+        ButterKnife.bind(this, view);
+        getActivity().setTitle(mStoreName);
+
+        userNameView.setText(mUserName);
 
         initViews(view);
         initBottomNavigation();

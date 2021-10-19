@@ -2,6 +2,8 @@ package com.app.inventoryapp.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.app.inventoryapp.Constants;
 import com.app.inventoryapp.R;
 import com.app.inventoryapp.models.Store;
 import com.app.inventoryapp.ui.MainActivity;
@@ -67,10 +70,16 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.Stor
         @BindView(R.id.storeName) TextView mStoreName;
         @BindView(R.id.storeLocation) TextView mStoreLocation;
 
+        private SharedPreferences mSharedPreferences;
+        private SharedPreferences.Editor mEditor;
+
 
         public StoreViewHolder(@NonNull View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+
+            mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
+            mEditor = mSharedPreferences.edit();
 
             cv = (CardView) itemView.findViewById(R.id.cv);
 
@@ -78,6 +87,10 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.Stor
             mStoreLocation =(TextView) itemView.findViewById(R.id.storeLocation);
             mContext = itemView.getContext();
             itemView.setOnClickListener(this);
+        }
+
+        private void addToSharedPreferences(String storeName){
+            mEditor.putString(Constants.PREFERENCES_STORE_KEY,storeName).apply();
         }
 
         public void bindStore (Store store){
@@ -88,7 +101,9 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.Stor
         @Override
         public void onClick(View view) {
             int itemPosition = getLayoutPosition();
+            String storeName = mStores.get(itemPosition).getName();
             Intent intent = new Intent(mContext, MainActivity.class);
+            addToSharedPreferences(storeName);
             intent.putExtra("position", itemPosition);
             mContext.startActivity(intent);
         }

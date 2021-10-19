@@ -14,6 +14,8 @@
     <string name="products">Products</string>
     <string name="reports">Reports</string>
     <string name="my_admins">My Admins</string>
+    <string name="user1Name">User Name</string>
+    <string name="welcomeMassage">Welcome</string>
     <string name="store_one">STORE ONE</string>
 
 </resources>

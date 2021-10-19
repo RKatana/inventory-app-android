@@ -1,38 +1,49 @@
 
+
 package com.app.inventoryapp.models;
 
-import java.io.Serializable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 
-public class User implements Serializable
-{
+public class User {
 
+    @SerializedName("name")
+    @Expose
+    private String name;
     @SerializedName("email")
     @Expose
     private String email;
     @SerializedName("password")
     @Expose
     private String password;
-    private final static long serialVersionUID = -9046787699061315607L;
 
     /**
      * No args constructor for use in serialization
-     * 
+     *
      */
     public User() {
     }
 
     /**
-     * 
+     *
      * @param password
+     * @param name
      * @param email
      */
-    public User(String email, String password) {
+    public User(String name, String email, String password) {
         super();
+        this.name = name;
         this.email = email;
         this.password = password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -49,6 +60,27 @@ public class User implements Serializable
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 1;
+        result = ((result* 31)+((this.name == null)? 0 :this.name.hashCode()));
+        result = ((result* 31)+((this.password == null)? 0 :this.password.hashCode()));
+        result = ((result* 31)+((this.email == null)? 0 :this.email.hashCode()));
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (other == this) {
+            return true;
+        }
+        if ((other instanceof User) == false) {
+            return false;
+        }
+        User rhs = ((User) other);
+        return ((((this.name == rhs.name)||((this.name!= null)&&this.name.equals(rhs.name)))&&((this.password == rhs.password)||((this.password!= null)&&this.password.equals(rhs.password))))&&((this.email == rhs.email)||((this.email!= null)&&this.email.equals(rhs.email))));
     }
 
 }

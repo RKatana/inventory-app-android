@@ -15,18 +15,11 @@
         android:padding="30dp">
 
         <ProgressBar
-            android:id="@+id/firebaseProgressBar"
+            android:id="@+id/ProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/loadingTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:textColor="@color/white"
-            android:visibility="gone" />
+            android:visibility="gone"
+            android:layout_gravity="center"/>
 
         <EditText
             android:id="@+id/emailEditText"

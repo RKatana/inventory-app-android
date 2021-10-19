@@ -28,7 +28,6 @@
                 android:text="Reports"
                 android:id="@+id/storeReports"
                 android:clickable="true"
-                android:onClick="adminButton"
                 android:textColor="@color/primaryTextColor"
                 android:focusable="true" />
 

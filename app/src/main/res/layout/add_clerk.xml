@@ -27,7 +27,6 @@
                 style="@style/viewParent.headerText"
                 android:text="Add Clerk"
                 android:clickable="true"
-                android:onClick="adminButton"
                 android:id="@+id/storeClerks"
                 android:textColor="@color/primaryTextColor"
                 android:focusable="true" />

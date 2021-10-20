@@ -43,6 +43,7 @@ public class StoreDetailsFragment extends Fragment{
 
     private TextView textView;
     private CardView cardView;
+    private ImageView imageView;
     private View view;
 
     private SharedPreferences mSharedPreferences;
@@ -98,9 +99,9 @@ public class StoreDetailsFragment extends Fragment{
                         startActivity(homeIntent);
 
                         break;
-                    case R.id.Clerk:
-                        Toast.makeText(getActivity(), "Clerk selected", Toast.LENGTH_SHORT).show();
-                        Intent clerkIntent = new Intent(getActivity(), MyClerksDashBoardActivity.class);
+                    case R.id.addStore:
+                        Toast.makeText(getActivity(), "AddStore selected", Toast.LENGTH_SHORT).show();
+                        Intent clerkIntent = new Intent(getActivity(), AddStoreActivity.class);
                         startActivity(clerkIntent);
 
                         break;

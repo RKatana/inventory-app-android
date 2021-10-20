@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.app.inventoryapp.R;
 import com.app.inventoryapp.adapter.ProductsListAdapter;

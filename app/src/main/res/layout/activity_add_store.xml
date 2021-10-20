@@ -3,15 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightPrimaryColor"
+    android:background="@drawable/bbbb"
     tools:context=".ui.AddStoreActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="80dp"
         android:orientation="vertical"
         android:padding="30dp">
 
@@ -63,24 +63,35 @@
             android:id="@+id/addStoreButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:padding="10dp"
-            android:text="Add"
+            android:text="CREATE STORE"
             android:textColor="@color/white"
-            android:layout_gravity="center"
             tools:ignore="TextContrastCheck" />
 
 
     </LinearLayout>
 
     <TextView
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:text="Add Store"
+        android:text="Get Started"
         android:textColor="@color/white"
         android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/user1Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_centerHorizontal="true"
+        android:text="Add your store to continue"
+        android:textColor="@color/white"
         android:textStyle="bold" />
 
 </RelativeLayout>

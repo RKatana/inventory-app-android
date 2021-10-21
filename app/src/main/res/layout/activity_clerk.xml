@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightPrimaryColor"
+    android:background="@drawable/bbbb"
     tools:context=".ui.AdminActivity">
 
     <LinearLayout
@@ -16,7 +16,7 @@
             android:id="@+id/userDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp">
+            android:layout_marginBottom="80dp">
 
             <ImageView
                 android:id="@+id/userProfile"
@@ -63,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/welcome"
+
                 android:layout_toEndOf="@+id/userProfile">
 
 

@@ -12,9 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ui.UpdateProfileActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.ClerkActivity"
             android:exported="true"
-            android:label="Clerk Online"/>
+            android:label="Clerk Online" />
         <activity
             android:name=".ui.AdminActivity"
             android:exported="true"
@@ -94,6 +97,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

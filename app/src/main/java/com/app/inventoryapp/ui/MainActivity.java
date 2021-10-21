@@ -68,9 +68,6 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer);
 
 
-
-
-
         setSupportActionBar(toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -128,16 +125,11 @@ public class MainActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.fragment_container_view_tag, new StoreDetailsFragment()).commit();
 
 
-        } else if (id == R.id.ProductList) {
-            Intent i = new Intent(this, ProductsActivity.class);
-            startActivity(i);
-
-        }else if (id == R.id.AddStore) {
-            Intent i = new Intent(this, AddStoreActivity.class);
-            startActivity(i);
-
         }else if (id == R.id.logout) {
             Toast.makeText(this, "LogOut: Selected", Toast.LENGTH_LONG).show();
+            Intent i = new Intent(this, SelectAccountActivity.class);
+            startActivity(i);
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer);
@@ -148,24 +140,26 @@ public class MainActivity extends AppCompatActivity
 
     public void storeButton(View view) {
         int id = view.getId();
-        if (R.id.image1 == id) {
+        if (R.id.admins == id) {
             Intent i = new Intent(this, MyAdminsDashBoardActivity.class);
             startActivity(i);
-        }else if (R.id.image4 == id) {
+        }else if (R.id.products == id) {
             Intent i = new Intent(this, ProductsActivity.class);
             startActivity(i);
 
-        }else if (R.id.image3 == id) {
+        }else if (R.id.stores == id) {
             Toast.makeText(this, "Stores", Toast.LENGTH_LONG).show();
             Intent i = new Intent(this, StoresDashboardActivity.class);
             startActivity(i);
 
-        }else if (R.id.image2 == id) {
+        }else if (R.id.reports == id) {
             Toast.makeText(this, "Reports", Toast.LENGTH_LONG).show();
             Intent i = new Intent(this, GraphReportActivity.class);
             startActivity(i);
+        }else if (R.id.addStore == id) {
+            Toast.makeText(this, "Add a store", Toast.LENGTH_LONG).show();
+            Intent i = new Intent(this, AddStoreActivity.class);
+            startActivity(i);
         }
     }
-
-
 }

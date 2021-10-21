@@ -18,5 +18,6 @@
     <color name="contentTextColor">#020000</color>
     <color name="primaryTextColor">#25C0DE</color>
     <color name="contentBodyColor">#FCFCFC</color>
+    <color name="appColor">#00c4cc</color>
 
 </resources>

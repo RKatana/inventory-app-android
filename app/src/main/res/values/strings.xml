@@ -17,5 +17,6 @@
     <string name="user1Name">User Name</string>
     <string name="welcomeMassage">Welcome</string>
     <string name="store_one">STORE ONE</string>
+    <string name="todo">TODO</string>
 
 </resources>

@@ -3,13 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightPrimaryColor"
+    android:background="@drawable/bbbb"
     tools:context=".ui.AttendantLoginActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:orientation="vertical"
@@ -80,7 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:padding="10dp"
-            android:text="Add"
+            android:text="SAVE"
             android:textColor="@color/white"
             android:layout_gravity="center"
             tools:ignore="TextContrastCheck" />
@@ -93,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:text="Add Store Attendant"
+        android:text="Add A Store Attendant"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold" />

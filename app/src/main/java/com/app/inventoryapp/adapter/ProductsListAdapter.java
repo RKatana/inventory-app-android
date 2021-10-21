@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,6 +81,11 @@ public class ProductsListAdapter extends RecyclerView.Adapter<ProductsListAdapte
 
         @BindView(R.id.ProductName) TextView mProductTextView;
         @BindView(R.id.paymentStatus) TextView mPaymentStatusTextView;
+        @BindView(R.id.textView7) TextView mDateTextView;
+        @BindView(R.id.productQuantity) TextView mQuantityTextView;
+        @BindView(R.id.productSpoilt) TextView mSpoiltTextView;
+        @BindView(R.id.productBp) TextView mBpTextView;
+        @BindView(R.id.productSp) TextView mSpTextView;
 
         public ProductsViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -97,7 +103,24 @@ public class ProductsListAdapter extends RecyclerView.Adapter<ProductsListAdapte
         }
         public void bindProduct (Product product){
             mProductTextView.setText(product.getName());
-           // mPaymentStatusTextView.setText(product.getQuantity());
+           Boolean paymentStatus = product.getPaymentStatus();
+            mDateTextView.setText(product.getDateReceived());
+            String quantity = String.valueOf(product.getQuantity());
+            mQuantityTextView.setText(quantity);
+            String spoilt = String.valueOf(product.getSpoilt());
+            mSpoiltTextView.setText(spoilt);
+            String bp = String.valueOf(product.getBuyingPrice());
+            mBpTextView.setText(bp);
+            String sp = String.valueOf(product.getSellingPrice());
+            Log.d("ProductsListAdapter",sp);
+            mSpTextView.setText(sp);
+            if (paymentStatus = true){
+               String payment = "paid";
+                mPaymentStatusTextView.setText(payment);
+            }else {
+                String payment = "not paid";
+                mPaymentStatusTextView.setText(payment);
+            }
         }
     }
 }

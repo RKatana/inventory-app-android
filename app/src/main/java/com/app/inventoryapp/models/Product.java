@@ -1,44 +1,90 @@
 package com.app.inventoryapp.models;
 
-import org.parceler.Parcel;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class Product {
-    private int id;
-    private String name;
-    private int quantity;
-    private int buyingPrice;
-    private int sellingPrice;
-    private int spoilt;
-    private boolean paymentStatus;
-    private int store_id;
-    private String  date;
 
-    public Product(String name, int quantity, int buyingPrice, int sellingPrice, int spoilt,String date) {
+    @SerializedName("id")
+    @Expose
+    private Integer id;
+    @SerializedName("uid")
+    @Expose
+    private String uid;
+    @SerializedName("name")
+    @Expose
+    private String name;
+    @SerializedName("quantity")
+    @Expose
+    private Integer quantity;
+    @SerializedName("buying_price")
+    @Expose
+    private Integer buyingPrice;
+    @SerializedName("selling_price")
+    @Expose
+    private Integer sellingPrice;
+    @SerializedName("spoilt")
+    @Expose
+    private Integer spoilt;
+    @SerializedName("payment_status")
+    @Expose
+    private Boolean paymentStatus;
+    @SerializedName("date_received")
+    @Expose
+    private String dateReceived;
+    @SerializedName("store")
+    @Expose
+    private Integer store;
+
+    /**
+     * No args constructor for use in serialization
+     *
+     */
+    public Product() {
+    }
+
+    /**
+     *
+     * @param uid
+     * @param sellingPrice
+     * @param quantity
+     * @param buyingPrice
+     * @param spoilt
+     * @param dateReceived
+     * @param name
+     * @param id
+     * @param store
+     * @param paymentStatus
+     */
+    public Product(Integer id, String uid, String name, Integer quantity, Integer buyingPrice, Integer sellingPrice, Integer spoilt, Boolean paymentStatus, String dateReceived, Integer store) {
+        super();
         this.id = id;
+        this.uid = uid;
         this.name = name;
         this.quantity = quantity;
         this.buyingPrice = buyingPrice;
         this.sellingPrice = sellingPrice;
         this.spoilt = spoilt;
-        this.date = date;
         this.paymentStatus = paymentStatus;
-        this.store_id = store_id;
+        this.dateReceived = dateReceived;
+        this.store = store;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getName() {
@@ -49,66 +95,60 @@ public class Product {
         this.name = name;
     }
 
-    public int getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
-    public int getBuyingPrice() {
+    public Integer getBuyingPrice() {
         return buyingPrice;
     }
 
-    public void setBuyingPrice(int buyingPrice) {
+    public void setBuyingPrice(Integer buyingPrice) {
         this.buyingPrice = buyingPrice;
     }
 
-    public int getSellingPrice() {
+    public Integer getSellingPrice() {
         return sellingPrice;
     }
 
-    public void setSellingPrice(int sellingPrice) {
+    public void setSellingPrice(Integer sellingPrice) {
         this.sellingPrice = sellingPrice;
     }
 
-    public int getSpoilt() {
+    public Integer getSpoilt() {
         return spoilt;
     }
 
-    public void setSpoilt(int spoilt) {
+    public void setSpoilt(Integer spoilt) {
         this.spoilt = spoilt;
     }
 
-    public boolean isPaymentStatus() {
+    public Boolean getPaymentStatus() {
         return paymentStatus;
     }
 
-    public void setPaymentStatus(boolean paymentStatus) {
+    public void setPaymentStatus(Boolean paymentStatus) {
         this.paymentStatus = paymentStatus;
     }
 
-    public int getStore_id() {
-        return store_id;
+    public String getDateReceived() {
+        return dateReceived;
     }
 
-    public void setStore_id(int store_id) {
-        this.store_id = store_id;
+    public void setDateReceived(String dateReceived) {
+        this.dateReceived = dateReceived;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", quantity=" + quantity +
-                ", buyingPrice=" + buyingPrice +
-                ", sellingPrice=" + sellingPrice +
-                ", spoilt=" + spoilt +
-                ", paymentStatus=" + paymentStatus +
-                ", store_id=" + store_id +
-                ", date='" + date + '\'' +
-                '}';
+    public Integer getStore() {
+        return store;
     }
+
+    public void setStore(Integer store) {
+        this.store = store;
+    }
+
 }

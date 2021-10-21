@@ -7,6 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class AuthenticatedUser {
 
+    @SerializedName("id")
+    @Expose
+    private int Id;
     @SerializedName("name")
     @Expose
     private String name;
@@ -31,9 +34,18 @@ public class AuthenticatedUser {
      */
     public AuthenticatedUser(String email, String role) {
         super();
+        this.Id = Id;
         this.name = name;
         this.email = email;
         this.role = role;
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int id) {
+        Id = id;
     }
 
     public String getName() {

@@ -91,8 +91,11 @@ public class OwnerLoginActivity extends AppCompatActivity implements View.OnClic
                     startActivity(intent);
                     loginResponse = response.body();
                     String userName = loginResponse.getAuthenticatedUser().getName();
-                    Log.d("ownerLogin",loginResponse.getAuthenticatedUser().getName());
+                    int userId = loginResponse.getAuthenticatedUser().getId();
+                    String userid = String.valueOf(userId);
+                    Log.d("ownerLogin", String.valueOf(loginResponse.getAuthenticatedUser().getId()));
                     addToSharedPreferences(userName);
+                    addToSharedPreferences1(userid);
                     Toast.makeText(getApplicationContext(),loginResponse.getMessage(),Toast.LENGTH_LONG).show();
                     finish();
                 }else {
@@ -110,6 +113,9 @@ public class OwnerLoginActivity extends AppCompatActivity implements View.OnClic
     }
     private void addToSharedPreferences(String loggedInUser){
         mEditor.putString(Constants.PREFERENCES_USERNAME,loggedInUser).apply();
+    }
+    private void addToSharedPreferences1(String userId){
+        mEditor.putString(Constants.PREFERENCES_USERID,userId).apply();
     }
     private void hideProgressBar() {
         mProgressBar.setVisibility(View.GONE);

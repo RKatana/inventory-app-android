@@ -118,6 +118,7 @@
 
             <Button
                 android:id="@+id/btn_clear"
+                android:onClick="clear"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="Clear"
@@ -127,7 +128,8 @@
                 android:textColor="@android:color/white" />
 
             <Button
-                android:id="@+id/btn_add"
+                android:id="@+id/btn_update"
+                android:onClick="updateProduct"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="Update"

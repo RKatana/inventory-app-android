@@ -18,8 +18,8 @@
             android:id="@+id/ProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:visibility="gone" />
 
         <EditText
             android:id="@+id/emailEditText"
@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:text="Don't have an account? Sign up Now!"
+            android:text="Don't have an account? Sign Up!"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />

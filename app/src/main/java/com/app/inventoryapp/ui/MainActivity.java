@@ -125,16 +125,11 @@ public class MainActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.fragment_container_view_tag, new StoreDetailsFragment()).commit();
 
 
-        } else if (id == R.id.ProductList) {
-            Intent i = new Intent(this, ProductsActivity.class);
-            startActivity(i);
-
-        }else if (id == R.id.AddStore) {
-            Intent i = new Intent(this, AddStoreActivity.class);
-            startActivity(i);
-
         }else if (id == R.id.logout) {
             Toast.makeText(this, "LogOut: Selected", Toast.LENGTH_LONG).show();
+            Intent i = new Intent(this, SelectAccountActivity.class);
+            startActivity(i);
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer);
@@ -167,6 +162,4 @@ public class MainActivity extends AppCompatActivity
             startActivity(i);
         }
     }
-
-
 }

@@ -1,23 +1,21 @@
 package com.app.inventoryapp.ui;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.app.inventoryapp.R;
 import com.app.inventoryapp.adapter.ProductsListAdapter;
 import com.app.inventoryapp.models.Product;
-import com.app.inventoryapp.models.Store;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.Arrays;
 import java.util.List;
@@ -73,7 +71,45 @@ public class ProductsActivity extends AppCompatActivity {
                 }
             }
         });
+    }
 
 
+    public void deleteButton(View view) {
+        int id = view.getId();
+        if (id == R.id.deleteButton) {
+            AlertDialog.Builder alert = new AlertDialog.Builder(ProductsActivity.this);
+            alert.setTitle("Alert!!");
+            alert.setMessage("Are you sure to delete this Product?");
+            alert.setCancelable(true);
+
+            alert.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                    finish();
+
+                }
+            });
+
+            alert.setNegativeButton("YES", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    finish();
+
+                }
+            });
+
+            alert.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+
+            alert.show();
+
+        }
     }
 }

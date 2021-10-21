@@ -30,6 +30,7 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2734375" />
         <entry key="app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-v26/activity_update_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_add_product.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/activity_add_store.xml" value="0.25729166666666664" />
         <entry key="app/src/main/res/layout/activity_add_store_admin.xml" value="0.15885416666666666" />
@@ -49,6 +50,8 @@
         <entry key="app/src/main/res/layout/activity_store_details.xml" value="0.15" />
         <entry key="app/src/main/res/layout/activity_stores_dashboard.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_update_product.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_update_profile.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_update_profiles.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/add_clerk.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/add_product2.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/admins_list_item.xml" value="0.16822916666666668" />
@@ -75,6 +78,7 @@
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.33" />
         <entry key="app/src/main/res/menu/admin_logout.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.18823529411764706" />
+        <entry key="app/src/main/res/menu/delete_product.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/menu/main.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/menu/master_bottom_navigation.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.1" />

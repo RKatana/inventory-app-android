@@ -28,7 +28,6 @@
                 android:text="Add Clerk"
                 android:clickable="true"
                 android:id="@+id/storeClerks"
-                android:onClick="adminButton"
                 android:textColor="@color/primaryTextColor"
                 android:focusable="true" />
 

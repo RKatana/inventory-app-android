@@ -81,7 +81,6 @@
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:layout_gravity="center"
-                        android:onClick="storeButton"
                         android:src="@drawable/report" />
 
                     <TextView
@@ -115,7 +114,6 @@
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:layout_gravity="center"
-                        android:onClick="storeButton"
                         android:src="@drawable/shop" />
 
                     <TextView
@@ -169,7 +167,6 @@
                         android:id="@+id/products"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        android:onClick="storeButton"
                         android:src="@drawable/tags" />
 
                     <TextView
@@ -202,7 +199,6 @@
                         android:id="@+id/admins"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        android:onClick="storeButton"
                         android:src="@drawable/admin" />
 
                     <TextView
@@ -217,7 +213,6 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
 
         </LinearLayout>
 

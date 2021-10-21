@@ -96,13 +96,16 @@ public class RegisterStoreOwnerActivity extends AppCompatActivity implements Vie
                    startActivity(intent);
                    registerUserResponse = response.body();
                    String registeredUserName = registerUserResponse.getUser().getName();
+                   int userId = registerUserResponse.getUser().getId();
+                   String userid = String.valueOf(userId);
                    addToSharedPreferences(registeredUserName);
-                   Log.d("ownerRegister", registerUserResponse.getMessage());
+                   addToSharedPreferences1(userid);
+                   Log.d("ownerRegister", String.valueOf(registerUserResponse.getUser().getId()));
                    Toast.makeText(getApplicationContext(), registerUserResponse.getMessage(), Toast.LENGTH_LONG).show();
                    finish();
                }
                else {
-                   Toast.makeText(getApplicationContext(),"email already exist", Toast.LENGTH_LONG).show();
+                   Toast.makeText(getApplicationContext(),"Failed", Toast.LENGTH_LONG).show();
                    hideProgressBar();
                }
            }
@@ -118,6 +121,9 @@ public class RegisterStoreOwnerActivity extends AppCompatActivity implements Vie
 
     private void addToSharedPreferences(String registeredUser){
         mEditor.putString(Constants.PREFERENCES_USERNAME,registeredUser).apply();
+    }
+    private void addToSharedPreferences1(String userId){
+        mEditor.putString(Constants.PREFERENCES_USERID,userId).apply();
     }
 
     private void hideProgressBar() {

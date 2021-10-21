@@ -93,17 +93,19 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.Stor
             mEditor.putString(Constants.PREFERENCES_STORE_KEY,storeName).apply();
         }
 
-        public void bindStore (Store store){
-            mStoreName.setText(store.getName());
-            mStoreLocation.setText(store.getLocation());
+        private void addToSharedPreferences1(String storeId){
+            mEditor.putString(Constants.PREFERENCES_STOREID,storeId).apply();
         }
+
 
         @Override
         public void onClick(View view) {
             int itemPosition = getLayoutPosition();
             String storeName = mStores.get(itemPosition).getName();
+            String storeId = String.valueOf(mStores.get(itemPosition).getId());
             Intent intent = new Intent(mContext, MainActivity.class);
             addToSharedPreferences(storeName);
+            addToSharedPreferences1(storeId);
             intent.putExtra("position", itemPosition);
             mContext.startActivity(intent);
         }

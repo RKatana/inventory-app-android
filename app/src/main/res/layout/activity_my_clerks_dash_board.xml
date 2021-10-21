@@ -8,6 +8,13 @@
     tools:context=".ui.MyClerksDashBoardActivity">
 
 
+    <ProgressBar
+        android:id="@+id/ProgressBar"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
     <Button
         android:id="@+id/createStoreClerk"
         android:layout_width="150dp"
@@ -21,6 +28,14 @@
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        android:visibility="gone" />
 
 
     <androidx.recyclerview.widget.RecyclerView

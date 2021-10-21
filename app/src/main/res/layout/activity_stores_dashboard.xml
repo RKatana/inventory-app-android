@@ -13,23 +13,38 @@
         android:id="@+id/sectionOne"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/ProgressBar"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/storeLists"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Available Stores"
+            android:text="My Stores"
             android:textColor="@color/white"
             android:textSize="20dp"
             android:textStyle="italic" />
+        <TextView
+            android:id="@+id/errorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="16dp"
+            android:visibility="gone" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/storeRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/storeLists"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:visibility="gone"/>
 
     </RelativeLayout>
 

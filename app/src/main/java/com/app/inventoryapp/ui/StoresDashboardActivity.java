@@ -4,15 +4,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
+import com.app.inventoryapp.Constants;
 import com.app.inventoryapp.R;
 import com.app.inventoryapp.adapter.ProductsListAdapter;
 import com.app.inventoryapp.adapter.StoreListAdapter;
+import com.app.inventoryapp.models.GetStoresResponse;
 import com.app.inventoryapp.models.Store;
+import com.app.inventoryapp.network.ApiClient;
+import com.app.inventoryapp.network.ApiService;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,22 +28,21 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class StoresDashboardActivity extends AppCompatActivity {
     private static final String TAG = "StoresDashboardActivity";
     @BindView(R.id.storeRecyclerView) RecyclerView mRecyclerView;
+    @BindView(R.id.errorTextView) TextView mErrorTextView;
+    @BindView(R.id.ProgressBar) ProgressBar mProgressBar;
 
-    Store store1 = new Store("Naivas Supermarket","Nairobi Karen");
-    Store store2 = new Store("Bestmart supermarket","Kenya");
-    Store store3 = new Store("Muthokinjo hardware","Karen");
-    Store store4 = new Store("Grocery inn"," Ngong");
-    Store store5 = new Store("Pizza inn ","Samburu");
-    Store store6 = new Store("Chuma hardware","Kitengela");
-    Store store7 = new Store("Kempiski restaurant","Don home");
-    Store store8 = new Store("Electronics ltd","Ngara");
-
+    private SharedPreferences mSharedPreferences;
     private StoreListAdapter mAdapter;
-    public List<Store> Stores = Arrays.asList(new Store[]{store1, store2, store3, store4, store5, store6, store7, store8});
+    private GetStoresResponse getStoresResponse;
+    public List<Store> Stores ;
+    private String userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +51,60 @@ public class StoresDashboardActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        mAdapter = new StoreListAdapter(Stores,this);
-        mRecyclerView.setAdapter(mAdapter);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(StoresDashboardActivity.this);
-        mRecyclerView.setLayoutManager(layoutManager);
-        mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setVisibility(View.VISIBLE);
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        userId = mSharedPreferences.getString(Constants.PREFERENCES_USERID,null);
+        int userid = Integer.parseInt(userId);
+
+        fetchStores(userid);
+    }
+
+    private void  fetchStores(int userId){
+        showProgressBar();
+        ApiService apiService = ApiClient.getClient();
+        Call<GetStoresResponse> call = apiService.getStores(userId);
+        call.enqueue(new Callback<GetStoresResponse>() {
+            @Override
+            public void onResponse(Call<GetStoresResponse> call, Response<GetStoresResponse> response) {
+                hideProgressBar();
+                if(response.isSuccessful()){
+                    getStoresResponse = response.body();
+                    Stores = getStoresResponse.getStores();
+                    mAdapter = new StoreListAdapter(Stores,StoresDashboardActivity.this);
+                    mRecyclerView.setAdapter(mAdapter);
+                    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(StoresDashboardActivity.this);
+                    mRecyclerView.setLayoutManager(layoutManager);
+                    mRecyclerView.setHasFixedSize(true);
+                    mRecyclerView.setVisibility(View.VISIBLE);
+
+                }else {
+                    showUnsuccessfulMessage();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<GetStoresResponse> call, Throwable t) {
+                showFailureMessage();
+                hideProgressBar();
+            }
+        });
+    }
+
+    private void showFailureMessage() {
+        mErrorTextView.setText("Something went wrong. Please check your Internet connection and try again later");
+        mErrorTextView.setVisibility(View.VISIBLE);
+    }
+
+    private void showUnsuccessfulMessage() {
+        mErrorTextView.setText("Something went wrong. Please try again later");
+        mErrorTextView.setVisibility(View.VISIBLE);
+    }
+
+    private void hideProgressBar() {
+        mProgressBar.setVisibility(View.GONE);
+    }
+    private void showProgressBar() {
+        mProgressBar.setVisibility(View.VISIBLE);
 
     }
 }

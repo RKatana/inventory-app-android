@@ -40,7 +40,6 @@ public interface ApiService {
     Call<GetStoresResponse> getStores(
             @Query("user") int user
     );
-
     @GET("authentication/auth/users/")
     Call<GetUsersResponse> getUsers(
             @Query("role")String role

@@ -26,6 +26,7 @@
             <TextView
                 style="@style/viewParent.headerText"
                 android:text="Products"
+                android:onClick="adminButton"
                 android:id="@+id/storeProducts"
                 android:clickable="true"
                 android:textColor="@color/primaryTextColor"

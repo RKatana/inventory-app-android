@@ -75,6 +75,7 @@
                         android:layout_width="65dp"
                         android:layout_height="65dp"
                         android:layout_centerHorizontal="true"
+                        android:onClick="storeButton"
                         android:padding="10dp"
                         android:src="@drawable/admin" />
 
@@ -117,6 +118,7 @@
                         android:layout_height="65dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginStart="11dp"
+                        android:onClick="storeButton"
                         android:padding="10dp"
                         android:src="@drawable/report" />
 
@@ -154,6 +156,7 @@
                         android:layout_width="65dp"
                         android:layout_height="65dp"
                         android:layout_centerHorizontal="true"
+                        android:onClick="storeButton"
                         android:padding="10dp"
                         android:src="@drawable/shop" />
 
@@ -194,6 +197,7 @@
                         android:layout_height="65dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginStart="11dp"
+                        android:onClick="storeButton"
                         android:padding="10dp"
                         android:src="@drawable/tags" />
 

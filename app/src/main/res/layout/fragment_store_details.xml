@@ -38,7 +38,7 @@
                 android:id="@+id/user1Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Stephen Njeri"
+                android:text="Dennis Njeru"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 

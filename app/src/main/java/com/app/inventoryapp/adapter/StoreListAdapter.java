@@ -104,6 +104,7 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.Stor
             String storeName = mStores.get(itemPosition).getName();
             String storeId = String.valueOf(mStores.get(itemPosition).getId());
             Intent intent = new Intent(mContext, MainActivity.class);
+            Log.d("storeid",storeId);
             addToSharedPreferences(storeName);
             addToSharedPreferences1(storeId);
             intent.putExtra("position", itemPosition);

@@ -17,7 +17,7 @@ public class GetStoresResponse {
     @SerializedName("message")
     @Expose
     private String message;
-    @SerializedName("stores")
+    @SerializedName("store")
     @Expose
     private List<Store> stores = null;
 

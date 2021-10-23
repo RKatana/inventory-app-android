@@ -81,8 +81,8 @@ public class AddStoreAdminActivity extends AppCompatActivity implements View.OnC
                     String registeredUserName = registerUserResponse.getUser().getName();
                     int userId = registerUserResponse.getUser().getId();
                     String userid = String.valueOf(userId);
-                    addToSharedPreferences(registeredUserName);
-                    addToSharedPreferences1(userid);
+                    //addToSharedPreferences(registeredUserName);
+                    //addToSharedPreferences1(userid);
                     Log.d("ownerRegister", String.valueOf(registerUserResponse.getUser().getId()));
                     Toast.makeText(getApplicationContext(), registerUserResponse.getMessage(), Toast.LENGTH_LONG).show();
                     finish();

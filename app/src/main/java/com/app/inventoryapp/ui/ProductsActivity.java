@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -24,6 +25,7 @@ import com.app.inventoryapp.network.ApiClient;
 import com.app.inventoryapp.network.ApiService;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -44,8 +46,8 @@ public class ProductsActivity extends AppCompatActivity {
     private SharedPreferences mSharedPreferences;
     private ProductsListAdapter mAdapter;
     private GetProductsResponse getProductsResponse;
-    public List<Product> products;
-    private int storeId;
+    public List<Product> products  = new ArrayList<>();
+    private String storeId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +55,7 @@ public class ProductsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_products);
 
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        storeId = Integer.parseInt(mSharedPreferences.getString(Constants.PREFERENCES_STOREID,null));
+        storeId = mSharedPreferences.getString(Constants.PREFERENCES_STOREID,null);
 
         ButterKnife.bind(this);
 
@@ -76,10 +78,10 @@ public class ProductsActivity extends AppCompatActivity {
 
     }
 
-    private void fetchProducts(int StoreId){
+    private void fetchProducts(String StoreId){
         showProgressBar();
         ApiService apiService = ApiClient.getClient();
-        Call<GetProductsResponse> call = apiService.getProducts(storeId);
+        Call<GetProductsResponse> call = apiService.getProductsById(storeId);
         call.enqueue(new Callback<GetProductsResponse>() {
             @Override
             public void onResponse(Call<GetProductsResponse> call, Response<GetProductsResponse> response) {
@@ -87,6 +89,7 @@ public class ProductsActivity extends AppCompatActivity {
                     hideProgressBar();
                     getProductsResponse = response.body();
                     products = getProductsResponse.getProducts();
+                   // Log.d("response",products.toString());
                     mAdapter = new ProductsListAdapter(products,ProductsActivity.this);
                     mRecyclerView.setAdapter(mAdapter);
                     RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ProductsActivity.this);

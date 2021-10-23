@@ -52,7 +52,7 @@ public class AddProduct extends AppCompatActivity implements View.OnClickListene
         ButterKnife.bind(this);
 
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        storeId = mSharedPreferences.getString(Constants.PREFERENCES_USERID,null);
+        storeId = mSharedPreferences.getString(Constants.PREFERENCES_STOREID,null);
 
         productLayout = (TextInputLayout) findViewById(R.id.productLayout);
         paymentStatusLayout = (TextInputLayout) findViewById(R.id.paymentStatusLayout);

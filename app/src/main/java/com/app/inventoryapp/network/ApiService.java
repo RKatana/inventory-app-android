@@ -17,6 +17,7 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface ApiService {
@@ -41,6 +42,11 @@ public interface ApiService {
             @Query("user") int user
     );
 
+    @GET("store/storebyuserid/{id}/")
+    Call<GetStoresResponse> getStoreById(
+            @Path("id") String userId
+    );
+
     @GET("authentication/auth/users/")
     Call<GetUsersResponse> getUsers(
             @Query("role")String role
@@ -49,6 +55,11 @@ public interface ApiService {
     @GET("product/products/")
     Call<GetProductsResponse> getProducts(
             @Query("store")int store
+    );
+
+    @GET("product/productbystoreid/{id}/")
+    Call<GetProductsResponse> getProductsById(
+            @Path("id") String storeId
     );
 
     @FormUrlEncoded

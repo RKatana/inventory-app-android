@@ -58,18 +58,13 @@ public class ProductsListAdapter extends RecyclerView.Adapter<ProductsListAdapte
             }
         });
 
-        holder.deleteButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-
-        });
 
     }
 
     @Override
     public int getItemCount() {
+        Log.d("ProductsListAdapter", String.valueOf(mProducts.size()));
         return mProducts.size();
     }
 
@@ -112,7 +107,6 @@ public class ProductsListAdapter extends RecyclerView.Adapter<ProductsListAdapte
             String bp = String.valueOf(product.getBuyingPrice());
             mBpTextView.setText(bp);
             String sp = String.valueOf(product.getSellingPrice());
-            Log.d("ProductsListAdapter",sp);
             mSpTextView.setText(sp);
             if (paymentStatus = true){
                String payment = "paid";

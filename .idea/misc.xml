@@ -40,6 +40,7 @@
         <entry key="app/src/main/res/layout/activity_store_details.xml" value="0.15" />
         <entry key="app/src/main/res/layout/activity_stores_dashboard.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_update_product.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_update_profile.xml" value="0.25729166666666664" />
         <entry key="app/src/main/res/layout/add_clerk.xml" value="0.25729166666666664" />
         <entry key="app/src/main/res/layout/add_product2.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/admins_list_item.xml" value="0.16822916666666668" />
@@ -48,17 +49,19 @@
         <entry key="app/src/main/res/layout/content_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.16822916666666668" />
+        <entry key="app/src/main/res/layout/fragment_graph_report_details.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/fragment_products.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/fragment_store_detail.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/fragment_store_details.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_store_details.xml" value="0.25" />
         <entry key="app/src/main/res/layout/ic_user.xml" value="0.14" />
         <entry key="app/src/main/res/layout/main_dashboard.xml" value="0.1" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/navigation_header.xml" value="0.25" />
         <entry key="app/src/main/res/layout/products.xml" value="0.25729166666666664" />
         <entry key="app/src/main/res/layout/products_list_item.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/products_report_list_item.xml" value="0.25729166666666664" />
         <entry key="app/src/main/res/layout/reports.xml" value="0.1" />
         <entry key="app/src/main/res/layout/reports_display.xml" value="0.16822916666666668" />
         <entry key="app/src/main/res/layout/stores_list_item.xml" value="0.33" />

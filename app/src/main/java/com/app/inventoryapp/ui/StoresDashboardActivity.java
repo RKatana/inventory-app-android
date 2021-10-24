@@ -54,14 +54,15 @@ public class StoresDashboardActivity extends AppCompatActivity {
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         userId = mSharedPreferences.getString(Constants.PREFERENCES_USERID,null);
         int userid = Integer.parseInt(userId);
+        Log.d("StoreDashbordActicity",userId);
 
-        fetchStores(userid);
+        fetchStores(userId);
     }
 
-    private void  fetchStores(int userId){
+    private void  fetchStores(String userId){
         showProgressBar();
         ApiService apiService = ApiClient.getClient();
-        Call<GetStoresResponse> call = apiService.getStores(userId);
+        Call<GetStoresResponse> call = apiService.getStoreById(userId);
         call.enqueue(new Callback<GetStoresResponse>() {
             @Override
             public void onResponse(Call<GetStoresResponse> call, Response<GetStoresResponse> response) {

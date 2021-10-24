@@ -17,7 +17,7 @@ public class GetProductsResponse {
     @SerializedName("message")
     @Expose
     private String message;
-    @SerializedName("products")
+    @SerializedName("product")
     @Expose
     private List<Product> products = null;
 

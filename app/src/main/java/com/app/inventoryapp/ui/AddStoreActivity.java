@@ -48,6 +48,7 @@ public class AddStoreActivity extends AppCompatActivity implements View.OnClickL
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         userId = mSharedPreferences.getString(Constants.PREFERENCES_USERID,null);
         mEditor = mSharedPreferences.edit();
+        Log.d("useridAddingStore",userId);
 
     }
 

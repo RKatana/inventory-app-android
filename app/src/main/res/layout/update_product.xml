@@ -121,6 +121,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="Clear"
+
                 android:layout_weight="1"
                 android:background="?attr/colorPrimary"
                 android:layout_margin="5dp"
@@ -130,6 +131,7 @@
                 android:id="@+id/btn_update"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+
                 android:text="Update"
                 android:layout_weight="1"
                 android:background="?attr/colorPrimary"
